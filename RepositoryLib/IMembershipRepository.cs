@@ -7,7 +7,7 @@ namespace RepositoryLib
         public bool LockUser(string email);
         public bool UnlockUser(string email);
         public bool ValidateUser(string email, string password);
-        public bool CreateUser(string userName, string password, string mobileNo, string emailId);
+        public bool CreateUser(string userName, string password, string mobileNo, string emailId,int roleId);
         public bool ChangePassword(string email, string oldPassword, string newPassword);
         public int GetNumberOfUsersOnline();
         public bool UpdateUser(User user);

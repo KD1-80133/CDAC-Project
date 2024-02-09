@@ -2,6 +2,18 @@
 {
     public class User
     {
+        public User()
+        {
+
+        }
+
+        public User(string EmailId, string MobileNo, string Name, int UserId)
+        {
+            this.EmailId = EmailId;
+            this.MobileNo = MobileNo;
+            this.Name = Name;
+            this.UserId = UserId;
+        }
         public int UserId { get; set; }
         public string EmailId { get; set; }
         public string Password { get; set; }
@@ -18,7 +30,7 @@
 
         public override string ToString()
         {
-            return $"UserId: {0}, EmailId: {1}, Password: {2}, MobileNo: {3}, IsOnline: {4}, IsLocked: {5}, RoleId: {6}, Name: {7}, AdharNumber: {8}, Address: {9}";
+            return $"UserId: {UserId}, EmailId: {EmailId}, Password: {Password}, MobileNo: {MobileNo}, IsOnline: {IsOnline}, IsLocked: {IsLocked}, RoleId: {RoleId}, Name: {Name}, AdharNumber: {AdharNumber}, Address: {Address}";
         }
 
 

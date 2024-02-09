@@ -21,7 +21,7 @@
                 do
                 {
                     int index = new Random().Next(0, characters.Length);
-                    character = character.ToCharArray()[index].ToString();
+                    character = characters.ToCharArray()[index].ToString();
                 } while (otp.IndexOf(character) != -1);
                 otp += character;
             }

@@ -9,7 +9,7 @@ namespace RepositoryLib
     public class MembershipRepository : IMembershipRepository
     {
 
-        public static string connectionDetails = "Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=HotelBookingSystem;Integrated Security=True;Encrypt=True";
+        public static string connectionDetails = "Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=Project;Integrated Security=True";
         public bool ChangePassword(string email, string oldPassword, string newPassword)
         {
             SqlConnection connection = new SqlConnection(connectionDetails);
@@ -30,14 +30,14 @@ namespace RepositoryLib
             }
         }
 
-        public bool CreateUser(string userName, string password, string mobileNo, string emailId)
+        public bool CreateUser(string userName, string password, string mobileNo, string emailId,int roleId)
         {
-            string connctionDetails = @"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=ErrorDB;";
+            string connctionDetails = @"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=Project;";
 
             SqlConnection connection = new SqlConnection(connctionDetails);
             connection.Open();
 
-            string query = "insert into T_User(Name,Password,MobileNo,EmailId) values(@Name,@Password,@MobileNo,@EmailId)";
+            string query = "insert into T_User(Name,Password,MobileNo,EmailId,RoleId) values(@Name,@Password,@MobileNo,@EmailId,@RoleId)";
 
             SqlCommand command = new SqlCommand(query, connection);
 
@@ -45,6 +45,7 @@ namespace RepositoryLib
             command.Parameters.Add(new SqlParameter("@Password", password));
             command.Parameters.Add(new SqlParameter("@MobileNo", mobileNo));
             command.Parameters.Add(new SqlParameter("@EmailId", emailId));
+            command.Parameters.Add(new SqlParameter("@RoleId", roleId));
 
             int rowsAffected = command.ExecuteNonQuery();
             connection.Close();
@@ -62,7 +63,7 @@ namespace RepositoryLib
 
         public bool DeleteUser(string emailId)
         {
-            string connctionDetails = @"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=ErrorDB;";
+            string connctionDetails = @"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=Project;";
 
             SqlConnection connection = new SqlConnection(connctionDetails);
             connection.Open();
@@ -126,7 +127,7 @@ namespace RepositoryLib
 
         public IEnumerable<User> GetAllUsers()
         {
-            string connctionDetails = @"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=ErrorDB;";
+            string connctionDetails = @"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=Project;";
 
             SqlConnection connection = new SqlConnection(connctionDetails);
             connection.Open();

@@ -16,7 +16,7 @@ namespace EnitityModelLib
 
         public override string ToString()
         {
-            return $"Id: {0}, UserId: {1}, OTP: {2}, GeneratedOn: {3}, ValidTill: {4}";
+            return $"Id: {Id}, UserId: {UserId}, OTP: {OTP}, GeneratedOn: {GeneratedOn}, ValidTill: {ValidTill}";
         }
     }
 }
