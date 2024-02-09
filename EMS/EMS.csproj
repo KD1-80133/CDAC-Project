@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Employee_Task_Managment\Project_logger.csproj" />
+    <ProjectReference Include="..\EnitityModelLib\EnitityModelLib.csproj" />
+    <ProjectReference Include="..\RepositoryLib\RepositoryLib.csproj" />
+    <ProjectReference Include="..\UtilityLib\UtilityLib.csproj" />
+  </ItemGroup>
+
+</Project>
