@@ -1,0 +1,12 @@
+C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\UtilityLib\bin\Debug\net6.0\UtilityLib.deps.json
+C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\UtilityLib\bin\Debug\net6.0\UtilityLib.dll
+C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\UtilityLib\bin\Debug\net6.0\UtilityLib.pdb
+C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\UtilityLib\obj\Debug\net6.0\UtilityLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\UtilityLib\obj\Debug\net6.0\UtilityLib.AssemblyInfoInputs.cache
+C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\UtilityLib\obj\Debug\net6.0\UtilityLib.AssemblyInfo.cs
+C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\UtilityLib\obj\Debug\net6.0\UtilityLib.csproj.CoreCompileInputs.cache
+C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\UtilityLib\obj\Debug\net6.0\UtilityLib.sourcelink.json
+C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\UtilityLib\obj\Debug\net6.0\UtilityLib.dll
+C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\UtilityLib\obj\Debug\net6.0\refint\UtilityLib.dll
+C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\UtilityLib\obj\Debug\net6.0\UtilityLib.pdb
+C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\UtilityLib\obj\Debug\net6.0\ref\UtilityLib.dll

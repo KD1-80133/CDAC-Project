@@ -1,0 +1,12 @@
+C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\EnitityModelLib\bin\Debug\net6.0\EnitityModelLib.deps.json
+C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\EnitityModelLib\bin\Debug\net6.0\EnitityModelLib.dll
+C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\EnitityModelLib\bin\Debug\net6.0\EnitityModelLib.pdb
+C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\EnitityModelLib\obj\Debug\net6.0\EnitityModelLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\EnitityModelLib\obj\Debug\net6.0\EnitityModelLib.AssemblyInfoInputs.cache
+C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\EnitityModelLib\obj\Debug\net6.0\EnitityModelLib.AssemblyInfo.cs
+C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\EnitityModelLib\obj\Debug\net6.0\EnitityModelLib.csproj.CoreCompileInputs.cache
+C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\EnitityModelLib\obj\Debug\net6.0\EnitityModelLib.sourcelink.json
+C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\EnitityModelLib\obj\Debug\net6.0\EnitityModelLib.dll
+C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\EnitityModelLib\obj\Debug\net6.0\refint\EnitityModelLib.dll
+C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\EnitityModelLib\obj\Debug\net6.0\EnitityModelLib.pdb
+C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\EnitityModelLib\obj\Debug\net6.0\ref\EnitityModelLib.dll
