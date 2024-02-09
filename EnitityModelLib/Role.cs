@@ -13,7 +13,7 @@ namespace EnitityModelLib
 
         public override string ToString()
         {
-            return this.RoleId + " " + this.RoleName;
+            return $"RoleId:{RoleId},RoleName:{RoleName}";
         }
     }
 }

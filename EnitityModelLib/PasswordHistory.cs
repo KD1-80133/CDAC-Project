@@ -16,7 +16,7 @@ namespace EnitityModelLib
 
         public override string ToString()
         {
-            return $"Id: {0}, UserId: {1}, ChangedOn: {2}, OldPassword: {3}, NewPassword: {4}";
+            return $"Id: {Id}, UserId: {UserId}, ChangedOn: {ChangedOn}, OldPassword: {OldPassword}, NewPassword: {NewPassword}";
         }
     }
 }

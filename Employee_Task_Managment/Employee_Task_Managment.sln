@@ -5,15 +5,19 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project_logger", "Project_logger.csproj", "{5BA7D826-A6DC-4CA4-8D2F-2B50B531D701}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryLib", "..\RepositoryLib\RepositoryLib.csproj", "{2C15B2E8-D665-4979-AC34-71F013F73260}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryLib", "..\RepositoryLib\RepositoryLib.csproj", "{2C15B2E8-D665-4979-AC34-71F013F73260}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMS", "..\EMS\EMS.csproj", "{D8A6C47F-9BD7-41A5-9BB0-D2D8C0B7C338}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMS", "..\EMS\EMS.csproj", "{D8A6C47F-9BD7-41A5-9BB0-D2D8C0B7C338}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnitityModelLib", "..\EnitityModelLib\EnitityModelLib.csproj", "{03B80B98-A85C-4873-B49F-D4A73E9D4475}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnitityModelLib", "..\EnitityModelLib\EnitityModelLib.csproj", "{03B80B98-A85C-4873-B49F-D4A73E9D4475}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtilityLib", "..\UtilityLib\UtilityLib.csproj", "{3EE37BB8-435B-4D5D-917E-B60520D511E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtilityLib", "..\UtilityLib\UtilityLib.csproj", "{3EE37BB8-435B-4D5D-917E-B60520D511E0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryLibTests", "..\RepositoryLibTests\RepositoryLibTests.csproj", "{40428EF6-5066-4E21-9323-5E66F785E4D3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebAPI", "WebAPI", "{F2A2E176-941F-4857-AF50-2591FEC243B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "..\WebAPI\WebAPI.csproj", "{13C929AC-D8CD-438C-9A14-0457A4806855}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,9 +49,16 @@ Global
 		{40428EF6-5066-4E21-9323-5E66F785E4D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40428EF6-5066-4E21-9323-5E66F785E4D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40428EF6-5066-4E21-9323-5E66F785E4D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13C929AC-D8CD-438C-9A14-0457A4806855}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13C929AC-D8CD-438C-9A14-0457A4806855}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13C929AC-D8CD-438C-9A14-0457A4806855}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13C929AC-D8CD-438C-9A14-0457A4806855}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{13C929AC-D8CD-438C-9A14-0457A4806855} = {F2A2E176-941F-4857-AF50-2591FEC243B4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8F86E855-A84B-4104-B29A-DBC21D29D06E}

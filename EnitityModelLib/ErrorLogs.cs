@@ -18,7 +18,7 @@ namespace EnitityModelLib
 
         public override string ToString()
         {
-            return $"Id: {0}, Source: {1}, Method: {2}, ErrorOn: {3}, Message: {4}, StackTrace: {5}";
+            return $"Id: {Id}, Source: {Source}, Method: {Method}, ErrorOn: {ErrorOn}, Message: {Message}, StackTrace: {StackTrace}";
         }
     }
 }
