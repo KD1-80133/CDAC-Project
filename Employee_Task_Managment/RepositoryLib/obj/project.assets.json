@@ -2091,11 +2091,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Akanksha\\Desktop\\Employee_Task_Management\\CDAC-Project\\Employee_Task_Managment\\Project_logger.csproj",
-      "projectName": "Project_logger",
-      "projectPath": "C:\\Users\\Akanksha\\Desktop\\Employee_Task_Management\\CDAC-Project\\Employee_Task_Managment\\Project_logger.csproj",
+      "projectUniqueName": "C:\\Users\\Akanksha\\Desktop\\Employee_Task_Management\\CDAC-Project\\Employee_Task_Managment\\RepositoryLib\\RepositoryLib.csproj",
+      "projectName": "RepositoryLib",
+      "projectPath": "C:\\Users\\Akanksha\\Desktop\\Employee_Task_Management\\CDAC-Project\\Employee_Task_Managment\\RepositoryLib\\RepositoryLib.csproj",
       "packagesPath": "C:\\Users\\Akanksha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Akanksha\\Desktop\\Employee_Task_Management\\CDAC-Project\\Employee_Task_Managment\\obj\\",
+      "outputPath": "C:\\Users\\Akanksha\\Desktop\\Employee_Task_Management\\CDAC-Project\\Employee_Task_Managment\\RepositoryLib\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Akanksha\\AppData\\Roaming\\NuGet\\NuGet.Config",
