@@ -10,7 +10,7 @@ namespace Project_logger
     {
         public LoggerFile()
         {
-            FilePath = @"C:\Users\Akanksha\Desktop\Employee_Task_Management\Logger.txt";
+            FilePath = @"C:\Users\nived\OneDrive\Desktop\CDAC-Project\Logger.txt";
         }
         public string FilePath { get; set; }
         public bool LoggerEntry(Exception e)
