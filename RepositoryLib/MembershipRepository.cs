@@ -51,17 +51,17 @@ namespace RepositoryLib
             connection.Close();
             if (rowsAffected == 1)
             {
-                //Console.WriteLine("Rows Affected : "+rowsAffected);
                 return true;
             }
             else
             {
-                //Console.WriteLine("data not entered correctly !!!");
                 return false;
             }
         }
 
-        public bool DeleteUser(string emailId)
+        
+
+public bool DeleteUser(string emailId)
         {
             string connctionDetails = @"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=Project;";
 
@@ -142,7 +142,7 @@ namespace RepositoryLib
             {
                 User user = new User();
                 user.UserId = Convert.ToInt32(reader["UserId"]);
-                user.Name = reader["Name"].ToString();
+                user.Name = reader["Name"].ToString();1
                 user.MobileNo = reader["MobileNo"].ToString();
                 user.Password = reader["Password"].ToString();
                 user.EmailId = reader["EmailId"].ToString();
@@ -228,16 +228,39 @@ namespace RepositoryLib
             SqlConnection connection = new SqlConnection(connectionDetails);
             connection.Open();
 
-            SqlCommand command = new SqlCommand("update T_User set IsLocked = @value where EmailId = @email", connection);
-            command.Parameters.AddWithValue("@value", true);
-            command.Parameters.AddWithValue("@email", email);
+            SqlCommand getAttemptsCommand = new SqlCommand("SELECT LoginAttempts FROM T_User WHERE EmailId = @email", connection);
+            getAttemptsCommand.Parameters.AddWithValue("@email", email);
 
-            int rowsAffected = command.ExecuteNonQuery();
-            if (rowsAffected > 0)
-                return true;
+            object attemptsResult = getAttemptsCommand.ExecuteScalar();
+            int loginAttempts = (attemptsResult != null) ? Convert.ToInt32(attemptsResult) : 0;
+
+            if (loginAttempts < 2) 
+            {
+                
+                loginAttempts++;
+
+                
+                SqlCommand updateCounterCommand = new SqlCommand("UPDATE T_User SET LoginAttempts = @attempts WHERE EmailId = @email", connection);
+                updateCounterCommand.Parameters.AddWithValue("@attempts", loginAttempts);
+                updateCounterCommand.Parameters.AddWithValue("@email", email);
+                updateCounterCommand.ExecuteNonQuery();
+            }
             else
-                return false;
+            {
+                
+                SqlCommand lockCommand = new SqlCommand("UPDATE T_User SET IsLocked = 1, LoginAttempts = 0 WHERE EmailId = @email", connection);
+                lockCommand.Parameters.AddWithValue("@email", email);
+                lockCommand.ExecuteNonQuery();
+
+                Console.WriteLine("User has been locked due to multiple failed login attempts.");
+                connection.Close();
+                return true;
+            }
+
+            connection.Close();
+            return false;
         }
+
 
         public bool ResetPassword(string emailId, string otp, string newPassword)
         {
@@ -314,29 +337,49 @@ namespace RepositoryLib
 
         public bool ValidateUser(string emailId, string password)
         {
-            SqlConnection connection = new SqlConnection(connectionDetails);
-            connection.Open();
-
-            string query = "select * from T_User where EmailId=@emailId";
-            SqlCommand commnd = new SqlCommand(query, connection);
-            commnd.Parameters.Add(new SqlParameter("@emailId", emailId));
-            SqlDataReader reader = commnd.ExecuteReader();
-
+            int userId = 0;
             string passwd = string.Empty;
-            while (reader.Read())
-            {
-                User user = new User();
-                user.Password = reader["Password"].ToString();
-                passwd = user.Password;
-            }
-            if (passwd == password)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
+
+            SqlConnection connection = new SqlConnection(connectionDetails);
+            
+                connection.Open();
+
+                string query = "SELECT UserId, Password FROM T_User WHERE EmailId = @emailId";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.Add(new SqlParameter("@emailId", emailId));
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    userId = Convert.ToInt32(reader["UserId"]);
+                    passwd = reader["Password"].ToString();
+                }
+
+
+            SqlConnection conn = new SqlConnection(connectionDetails);
+            
+                conn.Open();
+
+                if (passwd == password && userId > 0)
+                {
+                    string updateOnlineQuery = "UPDATE T_User SET IsOnline = 1 WHERE UserId = @UserId";
+                    SqlCommand commandOnline = new SqlCommand(updateOnlineQuery, conn);
+                    commandOnline.Parameters.Add(new SqlParameter("@UserId", userId));
+                    commandOnline.ExecuteNonQuery();
+                    Console.WriteLine("User is Online.");
+                    return true;
+                }
+                else
+                {
+                    string updateOfflineQuery = "UPDATE T_User SET IsOnline = 0 WHERE UserId = @UserId";
+                    SqlCommand commandOffline = new SqlCommand(updateOfflineQuery, conn);
+                    commandOffline.Parameters.Add(new SqlParameter("@UserId", userId));
+                    commandOffline.ExecuteNonQuery();
+                    Console.WriteLine("User is Offline.");
+                    return false;
+                }
             }
         }
+
     }
-}
