@@ -7,7 +7,8 @@ namespace EMS
         static void Main(string[] args)
         {
             IMembershipRepository mbr = new MembershipRepository();
-            mbr.ChangePassword("user1@example.com", "u1new", "User1new");
+            Console.WriteLine(
+            mbr.ValidateUser("user1@example.com","nopassword"));
             
         }
     }

@@ -346,8 +346,6 @@ namespace RepositoryLib
 
         public bool ValidateUser(string emailId, string password)
         {
-            
-            
             string connectionDetails = @"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=Logger;Integrated Security=True";
 
             SqlConnection connection = new SqlConnection(connectionDetails);
@@ -372,7 +370,6 @@ namespace RepositoryLib
             }
             else
             {
-                
                 count++;
                 if(count>=3)
                 {
