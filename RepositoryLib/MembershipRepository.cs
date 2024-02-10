@@ -142,7 +142,7 @@ public bool DeleteUser(string emailId)
             {
                 User user = new User();
                 user.UserId = Convert.ToInt32(reader["UserId"]);
-                user.Name = reader["Name"].ToString();1
+                user.Name = reader["Name"].ToString();
                 user.MobileNo = reader["MobileNo"].ToString();
                 user.Password = reader["Password"].ToString();
                 user.EmailId = reader["EmailId"].ToString();

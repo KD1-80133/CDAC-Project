@@ -72,3 +72,7 @@ C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\WebAPI\bin\Debug
 C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\WebAPI\bin\Debug\net6.0\RepositoryLib.pdb
 C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\WebAPI\bin\Debug\net6.0\EnitityModelLib.pdb
 C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\WebAPI\bin\Debug\net6.0\UtilityLib.pdb
+C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll

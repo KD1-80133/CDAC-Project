@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using RepositoryLib;
+using EnitityModelLib;
 
 namespace EMS
 {
@@ -12,14 +13,14 @@ namespace EMS
     {
         static void Main(string[] args)
         {
-            Logger errorLogger = LoggerFactory.GetErrorLogger("file");
-            errorLogger.LoggerEntry(new Exception("File error"));
+            //IDepartmentRepository dept = new DepartmentRepository();
 
-            errorLogger = LoggerFactory.GetErrorLogger("console");
-            errorLogger.LoggerEntry(new Exception("Console occurred."));
+            //Department department = new Department() { DeptId=1, DeptName = "HR 123" };
+            //dept.Modify(department);
+            IDesignationRepository desi = new DesignationRepository();
+            Designation designation = new Designation() { DesignationId=2,DesignationName = "Manager" };
+            desi.Modify(designation);
 
-            errorLogger = LoggerFactory.GetErrorLogger("db");
-            errorLogger.LoggerEntry(new Exception("DataBase error ."));
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace EnitityModelLib
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace EnitityModelLib
 {
     public class User
     {
@@ -22,6 +24,7 @@
         public bool IsOnline { get; set; }
 
         public bool IsLocked { get; set; }
+     
         public int RoleId { get; set; }
         public string Name { get; set; }
 
