@@ -1,0 +1,12 @@
+C:\Users\91988\Desktop\GITPROJ\CDAC-Project\EntityModel\bin\Debug\net6.0\EntityModelLib.deps.json
+C:\Users\91988\Desktop\GITPROJ\CDAC-Project\EntityModel\bin\Debug\net6.0\EntityModelLib.dll
+C:\Users\91988\Desktop\GITPROJ\CDAC-Project\EntityModel\bin\Debug\net6.0\EntityModelLib.pdb
+C:\Users\91988\Desktop\GITPROJ\CDAC-Project\EntityModel\obj\Debug\net6.0\EntityModelLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\91988\Desktop\GITPROJ\CDAC-Project\EntityModel\obj\Debug\net6.0\EntityModelLib.AssemblyInfoInputs.cache
+C:\Users\91988\Desktop\GITPROJ\CDAC-Project\EntityModel\obj\Debug\net6.0\EntityModelLib.AssemblyInfo.cs
+C:\Users\91988\Desktop\GITPROJ\CDAC-Project\EntityModel\obj\Debug\net6.0\EntityModelLib.csproj.CoreCompileInputs.cache
+C:\Users\91988\Desktop\GITPROJ\CDAC-Project\EntityModel\obj\Debug\net6.0\EntityModelLib.sourcelink.json
+C:\Users\91988\Desktop\GITPROJ\CDAC-Project\EntityModel\obj\Debug\net6.0\EntityModelLib.dll
+C:\Users\91988\Desktop\GITPROJ\CDAC-Project\EntityModel\obj\Debug\net6.0\refint\EntityModelLib.dll
+C:\Users\91988\Desktop\GITPROJ\CDAC-Project\EntityModel\obj\Debug\net6.0\EntityModelLib.pdb
+C:\Users\91988\Desktop\GITPROJ\CDAC-Project\EntityModel\obj\Debug\net6.0\ref\EntityModelLib.dll

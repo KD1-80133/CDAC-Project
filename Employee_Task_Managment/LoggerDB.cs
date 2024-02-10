@@ -25,7 +25,7 @@ namespace Project_logger
             SqlConnection connection = new SqlConnection(ConnectionDetails);
             connection.Open();
 
-            string query = "insert into ErrorLogs(Source,Method,ErrorOn,Message,StackTrace) values(@Source,@Method,@ErrorOn,@Message,@StackTrace)";
+            string query = "insert into T_ErrorLog(Source,Method,ErrorOn,Message,StackTrace) values(@Source,@Method,@ErrorOn,@Message,@StackTrace)";
 
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.Add(new SqlParameter("@Source", e.Source==null ? DBNull.Value:e.Source));

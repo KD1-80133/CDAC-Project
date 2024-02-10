@@ -49,3 +49,16 @@ C:\Users\Akanksha\Desktop\Employee_Task_Management\Employee_Task_Managment\obj\D
 C:\Users\Akanksha\Desktop\Employee_Task_Management\Employee_Task_Managment\obj\Debug\net6.0\Project_logger.pdb
 C:\Users\Akanksha\Desktop\Employee_Task_Management\Employee_Task_Managment\obj\Debug\net6.0\Project_logger.genruntimeconfig.cache
 C:\Users\Akanksha\Desktop\Employee_Task_Management\Employee_Task_Managment\obj\Debug\net6.0\ref\Project_logger.dll
+C:\Users\91988\Desktop\GITPROJ\CDAC-Project\Employee_Task_Managment\obj\Debug\net6.0\Project_logger.csproj.AssemblyReference.cache
+C:\Users\91988\Desktop\GITPROJ\CDAC-Project\Employee_Task_Managment\obj\Debug\net6.0\Project_logger.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\91988\Desktop\GITPROJ\CDAC-Project\Employee_Task_Managment\obj\Debug\net6.0\Project_logger.AssemblyInfoInputs.cache
+C:\Users\91988\Desktop\GITPROJ\CDAC-Project\Employee_Task_Managment\obj\Debug\net6.0\Project_logger.AssemblyInfo.cs
+C:\Users\91988\Desktop\GITPROJ\CDAC-Project\Employee_Task_Managment\obj\Debug\net6.0\Project_logger.csproj.CoreCompileInputs.cache
+C:\Users\91988\Desktop\GITPROJ\CDAC-Project\Employee_Task_Managment\obj\Debug\net6.0\Project_logger.sourcelink.json
+C:\Users\91988\Desktop\GITPROJ\CDAC-Project\Employee_Task_Managment\obj\Debug\net6.0\Project_logger.dll
+C:\Users\91988\Desktop\GITPROJ\CDAC-Project\Employee_Task_Managment\obj\Debug\net6.0\refint\Project_logger.dll
+C:\Users\91988\Desktop\GITPROJ\CDAC-Project\Employee_Task_Managment\obj\Debug\net6.0\Project_logger.pdb
+C:\Users\91988\Desktop\GITPROJ\CDAC-Project\Employee_Task_Managment\bin\Debug\net6.0\Project_logger.deps.json
+C:\Users\91988\Desktop\GITPROJ\CDAC-Project\Employee_Task_Managment\bin\Debug\net6.0\Project_logger.dll
+C:\Users\91988\Desktop\GITPROJ\CDAC-Project\Employee_Task_Managment\bin\Debug\net6.0\Project_logger.pdb
+C:\Users\91988\Desktop\GITPROJ\CDAC-Project\Employee_Task_Managment\obj\Debug\net6.0\ref\Project_logger.dll
