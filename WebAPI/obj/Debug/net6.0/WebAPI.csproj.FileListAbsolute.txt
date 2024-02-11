@@ -72,3 +72,7 @@ C:\Users\91988\Desktop\GITPROJ\CDAC-Project\WebAPI\bin\Debug\net6.0\UtilityLib.d
 C:\Users\91988\Desktop\GITPROJ\CDAC-Project\WebAPI\bin\Debug\net6.0\RepositoryLib.pdb
 C:\Users\91988\Desktop\GITPROJ\CDAC-Project\WebAPI\bin\Debug\net6.0\EntityModelLib.pdb
 C:\Users\91988\Desktop\GITPROJ\CDAC-Project\WebAPI\bin\Debug\net6.0\UtilityLib.pdb
+C:\Users\91988\Desktop\GITPROJ\CDAC-Project\WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\91988\Desktop\GITPROJ\CDAC-Project\WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\91988\Desktop\GITPROJ\CDAC-Project\WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\91988\Desktop\GITPROJ\CDAC-Project\WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll

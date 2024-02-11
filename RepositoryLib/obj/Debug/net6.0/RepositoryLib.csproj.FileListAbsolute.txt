@@ -16,3 +16,5 @@ C:\Users\91988\Desktop\GITPROJ\CDAC-Project\RepositoryLib\obj\Debug\net6.0\Repos
 C:\Users\91988\Desktop\GITPROJ\CDAC-Project\RepositoryLib\obj\Debug\net6.0\refint\RepositoryLib.dll
 C:\Users\91988\Desktop\GITPROJ\CDAC-Project\RepositoryLib\obj\Debug\net6.0\RepositoryLib.pdb
 C:\Users\91988\Desktop\GITPROJ\CDAC-Project\RepositoryLib\obj\Debug\net6.0\ref\RepositoryLib.dll
+C:\Users\91988\Desktop\GITPROJ\CDAC-Project\RepositoryLib\bin\Debug\net6.0\RepositoryLib.runtimeconfig.json
+C:\Users\91988\Desktop\GITPROJ\CDAC-Project\RepositoryLib\obj\Debug\net6.0\RepositoryLib.genruntimeconfig.cache
