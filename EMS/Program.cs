@@ -24,9 +24,30 @@ namespace EMS
             Department dept = new Department() {DeptId=2 ,DeptName = "customer relation" };
             department.Modify(dept);*/
 
-            IDepartmentRepository department = new DepartmentRepository();
-            department.Remove(1007);
+            /*            IDepartmentRepository department = new DepartmentRepository();
+                        department.Remove(1007);*/
 
+            /*IDesignationRepository designation = new DesignationRepository();
+            Designation desg = new Designation() { DesignationName = "DBA" };
+            designation.Add(desg);*/
+
+            /*IDesignationRepository designation = new DesignationRepository();
+            Console.WriteLine( designation.FindById(4));*/
+
+            /*IDesignationRepository designation = new DesignationRepository();
+            IEnumerable<Designation> desgList  =designation.GetDesignations();
+            foreach (var item in desgList)
+            {
+                Console.WriteLine(item);
+
+            }*/
+            /*IDesignationRepository designation = new DesignationRepository();
+            designation.Remove(3);
+*/
+
+            IDesignationRepository designation = new DesignationRepository();
+            Designation desg = new Designation() { DesignationId = 1, DesignationName = "project manager" };
+            designation.Modify(desg);
 
         }
     }

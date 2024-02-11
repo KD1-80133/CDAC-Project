@@ -25,6 +25,7 @@ namespace RepositoryLib
             base.OnModelCreating(modelBuilder);
         }
         public DbSet<EntityModelLib.Department> Departments { get; set; }
-        
+        public DbSet<EntityModelLib.Designation> Designations { get; set; }
+
     }
 }
