@@ -1389,6 +1389,9 @@
       "EntityModelLib/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.Data.SqlClient": "5.1.5"
+        },
         "compile": {
           "bin/placeholder/EntityModelLib.dll": {}
         },
@@ -1416,6 +1419,9 @@
       "UtilityLib/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.Data.SqlClient": "5.1.5"
+        },
         "compile": {
           "bin/placeholder/UtilityLib.dll": {}
         },
@@ -3766,6 +3772,7 @@
     "net6.0": [
       "MSTest.TestAdapter >= 3.0.4",
       "MSTest.TestFramework >= 3.0.4",
+      "Microsoft.Data.SqlClient >= 5.1.5",
       "Microsoft.NET.Test.Sdk >= 17.6.0",
       "RepositoryLib >= 1.0.0",
       "coverlet.collector >= 6.0.0"
@@ -3821,6 +3828,10 @@
           "MSTest.TestFramework": {
             "target": "Package",
             "version": "[3.0.4, )"
+          },
+          "Microsoft.Data.SqlClient": {
+            "target": "Package",
+            "version": "[5.1.5, )"
           },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",

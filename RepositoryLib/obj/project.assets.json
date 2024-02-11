@@ -1030,6 +1030,9 @@
       "EntityModelLib/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.Data.SqlClient": "5.1.5"
+        },
         "compile": {
           "bin/placeholder/EntityModelLib.dll": {}
         },
@@ -1040,6 +1043,9 @@
       "UtilityLib/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.Data.SqlClient": "5.1.5"
+        },
         "compile": {
           "bin/placeholder/UtilityLib.dll": {}
         },

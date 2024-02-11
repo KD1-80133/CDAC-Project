@@ -10,3 +10,4 @@ C:\Users\91988\Desktop\GITPROJ\CDAC-Project\EntityModel\obj\Debug\net6.0\EntityM
 C:\Users\91988\Desktop\GITPROJ\CDAC-Project\EntityModel\obj\Debug\net6.0\refint\EntityModelLib.dll
 C:\Users\91988\Desktop\GITPROJ\CDAC-Project\EntityModel\obj\Debug\net6.0\EntityModelLib.pdb
 C:\Users\91988\Desktop\GITPROJ\CDAC-Project\EntityModel\obj\Debug\net6.0\ref\EntityModelLib.dll
+C:\Users\91988\Desktop\GITPROJ\CDAC-Project\EntityModel\obj\Debug\net6.0\EntityModelLib.csproj.AssemblyReference.cache

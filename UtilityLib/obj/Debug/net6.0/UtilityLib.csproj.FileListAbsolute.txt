@@ -10,3 +10,4 @@ C:\Users\91988\Desktop\GITPROJ\CDAC-Project\UtilityLib\obj\Debug\net6.0\UtilityL
 C:\Users\91988\Desktop\GITPROJ\CDAC-Project\UtilityLib\obj\Debug\net6.0\refint\UtilityLib.dll
 C:\Users\91988\Desktop\GITPROJ\CDAC-Project\UtilityLib\obj\Debug\net6.0\UtilityLib.pdb
 C:\Users\91988\Desktop\GITPROJ\CDAC-Project\UtilityLib\obj\Debug\net6.0\ref\UtilityLib.dll
+C:\Users\91988\Desktop\GITPROJ\CDAC-Project\UtilityLib\obj\Debug\net6.0\UtilityLib.csproj.AssemblyReference.cache

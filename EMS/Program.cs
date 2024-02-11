@@ -1,5 +1,7 @@
 ﻿using EntityModelLib;
 using RepositoryLib;
+using static System.Net.Mime.MediaTypeNames;
+using System;
 
 namespace EMS
 {
@@ -15,9 +17,17 @@ namespace EMS
             Department dept = new Department() { DeptName = "fin" };
             department.Add(dept);*/
 
+            /* IDepartmentRepository department = new DepartmentRepository();
+             Department dept = new Department() { DeptId = 1 };
+             department.Remove(dept);*/
+            /*IDepartmentRepository department = new DepartmentRepository();
+            Department dept = new Department() {DeptId=2 ,DeptName = "customer relation" };
+            department.Modify(dept);*/
+
             IDepartmentRepository department = new DepartmentRepository();
-            Department dept = new Department() { DeptId = 1 };
-            department.Remove(dept);
+            department.Remove(1007);
+
+
         }
     }
 }

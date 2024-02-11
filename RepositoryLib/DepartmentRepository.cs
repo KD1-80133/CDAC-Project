@@ -12,10 +12,13 @@ namespace RepositoryLib
     {
         bool Add(Department department);
         bool Modify(Department Department);
-        bool Remove(Department Department);
+        void Remove(int deptid);
         IEnumerable<Department> GetDepartments();
 
         Department FindById(int deptId);
+        
+        //bool Remove(Department Department);
+
     }
     public class DepartmentRepository : IDepartmentRepository
     {
@@ -34,17 +37,8 @@ namespace RepositoryLib
 
         
 
-        /*public bool Delete(int deptId)
-        {
-            db.Departments.Remove(db.Departments.Find(deptId));
-            return true;
-        }*/
-        public bool Remove(Department department)
-        {
-            db.Remove(department);
-            db.SaveChanges();
-            return true;
-        }
+
+
 
         public Department FindById(int deptId)
         {
@@ -63,5 +57,23 @@ namespace RepositoryLib
             db.SaveChanges();
             return true;
         }
+
+        
+        
+            public void Remove(int deptId)
+            {
+                Department dept = FindById(deptId);
+            Console.WriteLine(dept);
+            db.Remove(dept);
+            db.SaveChanges();
+
+            }
+
+        /*        public bool Remove(Department department)
+        {
+            db.Remove(department);
+            db.SaveChanges();
+            return true;
+        }*/
     }
 }

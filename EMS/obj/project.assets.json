@@ -997,6 +997,9 @@
       "EntityModelLib/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.Data.SqlClient": "5.1.5"
+        },
         "compile": {
           "bin/placeholder/EntityModelLib.dll": {}
         },
@@ -1024,6 +1027,9 @@
       "UtilityLib/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.Data.SqlClient": "5.1.5"
+        },
         "compile": {
           "bin/placeholder/UtilityLib.dll": {}
         },
@@ -2710,6 +2716,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Microsoft.Data.SqlClient >= 5.1.5",
       "RepositoryLib >= 1.0.0"
     ]
   },
@@ -2755,6 +2762,12 @@
     "frameworks": {
       "net6.0": {
         "targetAlias": "net6.0",
+        "dependencies": {
+          "Microsoft.Data.SqlClient": {
+            "target": "Package",
+            "version": "[5.1.5, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

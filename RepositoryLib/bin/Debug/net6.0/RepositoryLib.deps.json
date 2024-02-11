@@ -602,11 +602,17 @@
         }
       },
       "EntityModelLib/1.0.0": {
+        "dependencies": {
+          "Microsoft.Data.SqlClient": "5.1.5"
+        },
         "runtime": {
           "EntityModelLib.dll": {}
         }
       },
       "UtilityLib/1.0.0": {
+        "dependencies": {
+          "Microsoft.Data.SqlClient": "5.1.5"
+        },
         "runtime": {
           "UtilityLib.dll": {}
         }

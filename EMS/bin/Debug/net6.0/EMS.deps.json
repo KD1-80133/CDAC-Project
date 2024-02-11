@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "EMS/1.0.0": {
         "dependencies": {
+          "Microsoft.Data.SqlClient": "5.1.5",
           "RepositoryLib": "1.0.0"
         },
         "runtime": {
@@ -577,6 +578,9 @@
         }
       },
       "EntityModelLib/1.0.0": {
+        "dependencies": {
+          "Microsoft.Data.SqlClient": "5.1.5"
+        },
         "runtime": {
           "EntityModelLib.dll": {}
         }
@@ -594,6 +598,9 @@
         }
       },
       "UtilityLib/1.0.0": {
+        "dependencies": {
+          "Microsoft.Data.SqlClient": "5.1.5"
+        },
         "runtime": {
           "UtilityLib.dll": {}
         }
