@@ -32,10 +32,17 @@ namespace EMS
             // dept.Modify(new Department() { DeptId = 2, DeptName = "HR123" });
             //dept.Remove(1);
 
-            IDesignationRepository desgn = new DesignationRepository();
-            Designation designation = new Designation() { DesignationName = "Team Leader" };
-            desgn.Add(designation);
+            //IDesignationRepository desgn = new DesignationRepository();
+            //Designation designation = new Designation() { DesignationName = "Team Leader" };
+            //desgn.Add(designation);
+            //desgn.Modify(new Designation { DesignationId = 1, DesignationName = "Team Head" });
+            // desgn.Remove(1);
 
+            IEmployeeRepository emp = new EmployeeRepository();
+            Employee employee = new Employee() { FirstName="Nivedita",LastName="patil",DesignationId=1,  HireDate= DateTime.Now ,IsResigned=false,HourlyRate=800,DepartmentId=1,  ManagerId=1};
+            //emp.Add(employee);
+
+            emp.Modify(new Employee() { FirstName = "Nivedita", LastName = "chougule", IsResigned = true, HourlyRate = 800, ManagerId = 2 });
 
 
 
