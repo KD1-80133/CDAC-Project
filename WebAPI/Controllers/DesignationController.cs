@@ -30,10 +30,10 @@ namespace WebAPI.Controllers
         }
 
         // PUT api/<DesignationController>/5
-        [HttpPut("{id}")]
+        /*[HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
-        }
+        }*/
 
         // DELETE api/<DesignationController>/5
         [HttpDelete("{id}")]

@@ -48,27 +48,31 @@ namespace WebAPI.Controllers
         }
 
         // PUT api/<DepartMentController>/5
-         [HttpPut]
+         /*[HttpPut]
          [Route("Modify")]
          public void Put([FromBody] Department value)
          {
             
             service.Modify(value);
-        }
+        }*/
 
-        /*[HttpPut("{id}")]
+        [HttpPut]
         [Route("Modify")]
         public void Put(int id, [FromBody] Department value)
         {
-            service.FindById(id);
-            service.Modify(value);
-        }*/
+            Department tomodified=service.FindById(id);
+            Console.WriteLine(tomodified);
+            tomodified.DeptId = id;
+            tomodified.DeptName = value.DeptName;
+            Console.WriteLine(tomodified);
+            service.Modify(tomodified);
+        }
 
         // DELETE api/<DepartMentController>/5
          [HttpDelete("{id}")]
          public void Delete(int id)
          {
-            service.Delete(id);
+            service.Remove(id);
          }
 
 
