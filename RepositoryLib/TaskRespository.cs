@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Task = EnitityModelLib.Task;
 
+
 namespace RepositoryLib
 {
     public interface ITaskRepository
@@ -28,6 +29,10 @@ namespace RepositoryLib
 
         public bool Add(Task task)
         {
+            TimeSpan duration = task.EndDate - task.StartDate;
+            int workHours = int.Parse((Math.Floor(duration.TotalDays)* 9).ToString()); 
+            task.WorkHours = workHours;
+
             db.Add(task);
             db.SaveChanges();
             return true;
@@ -54,7 +59,11 @@ namespace RepositoryLib
                 toBeModify.TaskDescription = task.TaskDescription;
                 toBeModify.StartDate = task.StartDate;
                 toBeModify.EndDate = task.EndDate;
-                toBeModify.WorkHours = task.WorkHours;
+
+                TimeSpan duration = task.EndDate - task.StartDate;
+                int workHours = int.Parse((Math.Floor(duration.TotalDays) * 9).ToString());
+                task.WorkHours = workHours;
+
                 toBeModify.Status = task.Status;
 
                 db.SaveChanges();

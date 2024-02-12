@@ -34,7 +34,7 @@ namespace EnitityModelLib
         public DateTime EndDate { get; set; }
         [Required]
         [Column("WorkHours")]
-        public DateTime WorkHours { get; set; }
+        public int WorkHours { get; set; }
         [Required]
         [Column("Status")]
         public string Status { get; set; }

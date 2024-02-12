@@ -12,65 +12,68 @@ namespace RepositoryLib
         bool Add(BankAccount bankAccount);
         IEnumerable<BankAccount> GetAllAccount();
         void Modify(BankAccount bankAccount);
-        BankAccount FindById(int accountNO);
-        bool Remove(int accountNo);
+        BankAccount FindById(string accountNO);
+        bool Remove(string accountNo);
     }
 
-    public class BankAccountRepository : IBankAccountRepository
+    // BankAccountRepository class
+
+    namespace RepositoryLib
     {
-        private ProjectDbContext db;
-
-        public BankAccountRepository()
+        public class BankAccountRepository : IBankAccountRepository
         {
-            db = new ProjectDbContext();
-        }
+            private ProjectDbContext db;
 
-        public bool Add(BankAccount bankAccount)
-        {
-            db.Add(bankAccount);
-            db.SaveChanges();
-            return true;
-        }
-
-        public BankAccount FindById(int accountNo)
-        {
-            return db.BankAccounts.FirstOrDefault(account => account.AccountNo == accountNo);
-        }
-
-
-        public IEnumerable<BankAccount> GetAllAccount()
-        {
-            return db.BankAccounts.ToList();
-        }
-
-        public void Modify(BankAccount bankAccount)
-        {
-            BankAccount toBeModify = db.BankAccounts.FirstOrDefault(account => bankAccount.AccountNo == account.AccountNo);
-
-            if (toBeModify != null)
+            public BankAccountRepository()
             {
-                toBeModify.AccountHolderName = bankAccount.AccountHolderName;
-                toBeModify.AccountType = bankAccount.AccountType;
-                toBeModify.BankName = bankAccount.BankName;
-                toBeModify.IFSCCode = bankAccount.IFSCCode;
-                
-
-                db.SaveChanges();
+                db = new ProjectDbContext();
             }
-        }
 
-        public bool Remove(int accountNo)
-        {
-            BankAccount account = FindById(accountNo);
-
-            if (account != null)
+            public bool Add(BankAccount bankAccount)
             {
-                db.Remove(account);
+                db.Add(bankAccount);
                 db.SaveChanges();
                 return true;
             }
 
-            return false;
+            public BankAccount FindById(string accountNo)
+            {
+                return db.BankAccounts.FirstOrDefault(account => account.AccountNo == accountNo);
+            }
+
+            public IEnumerable<BankAccount> GetAllAccount()
+            {
+                return db.BankAccounts.ToList();
+            }
+
+            public void Modify(BankAccount bankAccount)
+            {
+                BankAccount toBeModify = db.BankAccounts.FirstOrDefault(account => account.AccountNo == bankAccount.AccountNo);
+
+                if (toBeModify != null)
+                {
+                    toBeModify.AccountHolderName = bankAccount.AccountHolderName;
+                    toBeModify.AccountType = bankAccount.AccountType;
+                    toBeModify.BankName = bankAccount.BankName;
+                    toBeModify.IFSCCode = bankAccount.IFSCCode;
+
+                    db.SaveChanges();
+                }
+            }
+
+            public bool Remove(string accountNo)
+            {
+                BankAccount account = FindById(accountNo);
+
+                if (account != null)
+                {
+                    db.Remove(account);
+                    db.SaveChanges();
+                    return true;
+                }
+
+                return false;
+            }
         }
     }
 }

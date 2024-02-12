@@ -14,7 +14,7 @@ namespace EnitityModelLib
         [Key]
         [Required]
         [Column("AccountNo")]
-        public int AccountNo { get; set; }
+        public string AccountNo { get; set; }
         [Required]
         [Column("AccountHolderName")]
         public string AccountHolderName { get; set; }
@@ -26,7 +26,7 @@ namespace EnitityModelLib
         public string BankName { get; set; }
         [Required]
         [Column("IFSCCode")]
-        public int IFSCCode { get; set; }
+        public string IFSCCode { get; set; }
         [Required]
         [Column("UserId")]
         public int UserId { get; set; }

@@ -1,6 +1,7 @@
 ﻿using EnitityModelLib;
 using Project_logger;
 using RepositoryLib;
+using RepositoryLib.RepositoryLib;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace EMS
     {
         static void Main(string[] args)
         {
-
+            //------------logger------------------//
             //Logger errorLogger = LoggerFactory.GetErrorLogger("file");
             //errorLogger.LoggerEntry(new Exception("File error"));
 
@@ -26,37 +27,7 @@ namespace EMS
             //errorLogger = LoggerFactory.GetErrorLogger("db");
             //errorLogger.LoggerEntry(new Exception("DataBase error ."));
 
-            //IDepartmentRepository dept = new DepartmentRepository();
-            //Department department = new Department() { DeptName = "Development" };
-            //dept.Add(department);
-            // dept.Modify(new Department() { DeptId = 2, DeptName = "HR123" });
-            //dept.Remove(1);
-
-            //IDesignationRepository desgn = new DesignationRepository();
-            //Designation designation = new Designation() { DesignationName = "Team Leader" };
-            ////desgn.Add(designation);
-            ////desgn.Modify(new Designation { DesignationId = 1, DesignationName = "Team Head" });
-            //desgn.Remove(1);
-
-
-
-
-
-            //   IEmployeeRepository emp = new EmployeeRepository();
-            ////   Employee employee = new Employee() { FirstName = "Nivedita", LastName = "patil", DesignationId = 1, HireDate = DateTime.Now, IsResigned = false, HourlyRate = 800, DepartmentId = 1, ManagerId = 1 };
-            //   //emp.Add(employee);
-
-            //   emp.Modify(new Employee() { FirstName = "Nivedita", LastName = "chougule", IsResigned = true, HourlyRate = 800, ManagerId = 2 });
-
-
-
-
-            //IEmployeeRepository emp = new EmployeeRepository();
-            //emp.Modify(new Employee() { FirstName = "Nivedita", LastName = "chougule", IsResigned = true, HourlyRate = 800, ManagerId = 2 });
-
-
-
-
+            //-----------Membership-------------------------//
             //MembershipRepository repo = new MembershipRepository();
             //repo.ChangePassword("nivedita.patil96@gmail.com", "nivedita", "pratik");
 
@@ -113,6 +84,16 @@ namespace EMS
             Console.WriteLine(
             mbr.ValidateUser("user1@example.com","nopassword"));*/
 
+
+
+            //---------------Department--------------------//
+            //IDepartmentRepository dept = new DepartmentRepository();
+            //Department department = new Department() { DeptName = "Development" };
+            //dept.Add(department);
+            // dept.Modify(new Department() { DeptId = 2, DeptName = "HR123" });
+            //dept.Remove(1);
+
+
             //IDepartmentRepository department = new DepartmentRepository();
             //Department dept = new Department() { DeptName = "fin" };
             //department.Add(dept);
@@ -130,6 +111,14 @@ namespace EMS
             //    Console.WriteLine(item);
 
             //}
+
+            //------------------Designation--------------//
+            //IDesignationRepository desgn = new DesignationRepository();
+            //Designation designation = new Designation() { DesignationName = "Team Leader" };
+            ////desgn.Add(designation);
+            ////desgn.Modify(new Designation { DesignationId = 1, DesignationName = "Team Head" });
+            //desgn.Remove(1);
+
 
             //IDesignationRepository designation = new DesignationRepository();
             //Designation desg = new Designation() { DesignationName = "DBA" };
@@ -153,6 +142,18 @@ namespace EMS
             //IDesignationRepository designation = new DesignationRepository();
             //Designation desg = new Designation() { DesignationId = 1, DesignationName = "project manager" };
             //designation.Modify(desg);
+
+
+            //----------------------Employee-----------------//
+
+            //   IEmployeeRepository emp = new EmployeeRepository();
+            ////   Employee employee = new Employee() { FirstName = "Nivedita", LastName = "patil", DesignationId = 1, HireDate = DateTime.Now, IsResigned = false, HourlyRate = 800, DepartmentId = 1, ManagerId = 1 };
+            //   //emp.Add(employee);
+
+            //   emp.Modify(new Employee() { FirstName = "Nivedita", LastName = "chougule", IsResigned = true, HourlyRate = 800, ManagerId = 2 });
+
+            //IEmployeeRepository emp = new EmployeeRepository();
+            //emp.Modify(new Employee() { FirstName = "Nivedita", LastName = "chougule", IsResigned = true, HourlyRate = 800, ManagerId = 2 });
 
             //IEmployeeRepository employee = new EmployeeRepository();
             //Employee emp = new Employee() { FirstName = "Salman", LastName = "Khan",DesignationId=1,DeptId=3,IsResigned= false ,HourlyRate=5000,ManagerId=2,HireDate=new DateTime(2005,10,1)};
@@ -214,30 +215,53 @@ namespace EMS
             //-------------Task--------//
             //Add Task
             ITaskRepository taskRepository = new TaskRepository();
-            Task task = new Task()
-            {
-                UserId = 1,
-                ProjectId = 1,
-                TaskDescription = "Sample Task",
-                StartDate = DateTime.Now,
-                EndDate = DateTime.Now.AddDays(7),
-                WorkHours = new TimeOnly(8, 0),
-                Status = "Open"
-            };
-            taskRepository.Add(task);
-            //Remove Task
+            //Task task = new Task()
+            //{
+            //    UserId = 3,
+            //    ProjectId = 1,
+            //    TaskDescription = "Enitity",
+            //    StartDate = new DateTime(2024, 2, 12), 
+            //    EndDate = new DateTime(2024, 2, 21),
+            //    Status = "Inprogress"
+            //};
 
+            //taskRepository.Add(task);
+
+            //Remove Task
+            //int taskIdToRemove = 1; 
+            //bool removed = taskRepository.Remove(taskIdToRemove);
 
             //Modify Task
+            //Task taskToModify = new Task()
+            //{
+            //    TaskId = 3,
+            //    UserId = 3,
+            //    ProjectId = 1,
+            //    TaskDescription = "Entity Framework",
+            //    StartDate = new DateTime(2024, 2, 12),
+            //    EndDate = new DateTime(2024, 2, 21),
+            //    Status = "Completed"
+            //};
+            //taskRepository.Modify(taskToModify);
+
 
             //Find By TAsk Id
+            //int taskIdToFind = 2; 
+            //Task foundTask = taskRepository.FindById(taskIdToFind);
+            //Console.WriteLine(foundTask);
 
             //Gat All Task
-
-
-
-
+            IEnumerable<Task> allTasks = taskRepository.GetAllTasks();
+            foreach (var task in allTasks)
+            {
+                Console.WriteLine(task);
+            }
         }
+
+
+
+    
     }
-}
+    }
+
         
