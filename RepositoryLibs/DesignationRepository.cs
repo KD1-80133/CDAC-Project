@@ -43,9 +43,16 @@ namespace RepositoryLib
             return true;
         }
 
+
+        public Designation FindById(int DesignationId)
+        {
+            return db.Designations.Find(DesignationId);
+        }
         public bool Remove(int DesignationId)
         {
-            db.Designations.Remove(db.Designations.Find(DesignationId));
+            Designation desg = FindById(DesignationId);
+            db.Designations.Remove(desg);
+            db.SaveChanges();
             return true;
         }
     }

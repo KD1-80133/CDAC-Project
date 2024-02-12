@@ -10,7 +10,7 @@ namespace RepositoryLib
     public interface IEmployeeRepository
     {
         bool Add(EntityModelLib.Employee employee);
-        bool Modify(EntityModelLib.Employee employee);
+        void Modify(EntityModelLib.Employee employee);
         bool Remove(int EmpId);
         IEnumerable<EntityModelLib.Employee> GetAllEmployees();
     }
@@ -35,22 +35,31 @@ namespace RepositoryLib
             return db.Employees.ToList<Employee>();
         }
 
-        public bool Modify(Employee employee)
+        public void Modify(Employee employee)
         {
-            Employee tobeModify = db.Employees.Where(emp => employee.EmpId == emp.EmpId).ToList().FirstOrDefault<Employee>();
+            Console.WriteLine(employee);
+            Employee tobeModify = db.Employees.Where(emps => employee.DepartmentId == emps.DepartmentId).ToList().FirstOrDefault<Employee>();
             tobeModify.FirstName = employee.FirstName;
             tobeModify.LastName = employee.LastName;
-            tobeModify.HireDate = employee.HireDate;
+            tobeModify.DesignationId = employee.DesignationId;
             tobeModify.IsResigned = employee.IsResigned;
-            tobeModify.HourlyRate = employee.HourlyRate;
-            tobeModify.ManagerId = employee.ManagerId;
+            /* tobeModify.HourlyRate = employee.HourlyRate;
+             tobeModify.DeptId = employee.DeptId;
+             tobeModify.ManagerId = employee.ManagerId;*/
+            Console.WriteLine(tobeModify);
             db.SaveChanges();
-            return true;
+
         }
 
+        public Employee FindById(int EmpId)
+        {
+            return db.Employees.Find(EmpId);
+        }
         public bool Remove(int EmpId)
         {
-            db.Employees.Remove(db.Employees.Find(EmpId));
+            Employee emp = FindById(EmpId);
+            db.Employees.Remove(emp);
+            db.SaveChanges();
             return true;
         }
     }

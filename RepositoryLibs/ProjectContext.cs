@@ -23,5 +23,8 @@ namespace RepositoryLib
         public DbSet<Designation> Designations { get; set; }
         public DbSet<Employee> Employees { get; set; }
 
+        public DbSet<Project> Projects { get; set; }
+        public DbSet<ProjectMembers> ProjectMembers { get; set; }
+
     }
 }

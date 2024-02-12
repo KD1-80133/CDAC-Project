@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EntityModelsLib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -18,5 +19,10 @@ namespace EntityModelLib
         [Required]
         [Column("DeptName")]
         public string DeptName { get; set; }
+
+        public override string ToString()
+        {
+            return $"DeptId: {DeptId}, DeptName: {DeptName}";
+        }
     }
 }

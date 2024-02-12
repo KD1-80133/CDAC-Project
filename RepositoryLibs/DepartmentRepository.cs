@@ -43,9 +43,15 @@ namespace RepositoryLib
             return true;
         }
 
+        public Department FindById(int DeptId)
+        {
+            return db.Departments.Find(DeptId);
+        }
         public bool Remove(int DeptId)
         {
-            db.Departments.Remove(db.Departments.Find(DeptId));
+            Department dept = FindById(DeptId);
+            db.Departments.Remove(dept);
+            db.SaveChanges();
             return true;
         }
     }

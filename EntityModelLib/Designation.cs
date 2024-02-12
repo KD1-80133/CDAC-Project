@@ -17,5 +17,10 @@ namespace EntityModelLib
         [Required]
         [Column("DesignationName")]
         public string DesignationName { get; set; }
+
+        public override string ToString()
+        {
+            return $"DesignationId: {DesignationId}, DesignationName: {DesignationName}";
+        }
     }
 }

@@ -27,24 +27,40 @@ namespace EMS
             //errorLogger.LoggerEntry(new Exception("DataBase error ."));
 
             //IDepartmentRepository dept = new DepartmentRepository();
-            //Department department = new Department() { DeptName = "Development" };
+            //Department department = new Department() { DeptName = "Design" };
             //dept.Add(department);
-            // dept.Modify(new Department() { DeptId = 2, DeptName = "HR123" });
+            //dept.Modify(new Department() { DeptId = 2, DeptName = "HR123" });
             //dept.Remove(1);
+            //IEnumerable<Department> deptList = dept.GetAllDepartments();
+            //foreach (var item in deptList)
+            //{
+            //    Console.WriteLine(item);
+
+            //}
 
             //IDesignationRepository desgn = new DesignationRepository();
-            //Designation designation = new Designation() { DesignationName = "Team Leader" };
+            //Designation designation = new Designation() { DesignationName = "Data Scientist" };
             //desgn.Add(designation);
             //desgn.Modify(new Designation { DesignationId = 1, DesignationName = "Team Head" });
-            // desgn.Remove(1);
+            //desgn.Remove(2);
+            //IEnumerable<Designation> desnList = desgn.GetAllDesignations();
+            //foreach (var item in desnList)
+            //{
+            //    Console.WriteLine(item);
 
-            IEmployeeRepository emp = new EmployeeRepository();
-            Employee employee = new Employee() { FirstName="Nivedita",LastName="patil",DesignationId=1,  HireDate= DateTime.Now ,IsResigned=false,HourlyRate=800,DepartmentId=1,  ManagerId=1};
+            //}
+
+            //IEmployeeRepository emp = new EmployeeRepository();
+            //Employee employee = new Employee() { FirstName = "shital", LastName = "chougule", DesignationId = 3, HireDate = DateTime.Now, IsResigned = false, HourlyRate = 500, DepartmentId = 2, ManagerId = 2 };
             //emp.Add(employee);
 
-            emp.Modify(new Employee() { FirstName = "Nivedita", LastName = "chougule", IsResigned = true, HourlyRate = 800, ManagerId = 2 });
+            //emp.Modify(new Employee() { FirstName = "Nivedita", LastName = "chougule", DesignationId = 2,IsResigned = true });
 
+            IProjectRepository proj = new ProjectRepository();
+            Project project = new Project() { Title = "Matrimonal mgt. system" ,StartDate=new DateTime(2024,10,15) ,EndDate=new DateTime(2024,12,10)};
+            //proj.Add(project);
 
+            proj.Modify()
 
 
 
