@@ -1,5 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using EnitityModelLib;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 using RepositoryLib;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 using WebAPI.Model;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -31,15 +37,39 @@ namespace WebAPI.Controllers
 
         // POST api/<AccountController>
         [HttpPost]
+        [AllowAnonymous]
+
         [Route("/User/Login")]
-        public bool Post([FromBody] Login value)
+        
+        public IActionResult Post([FromBody] Login value)
         {
+            IActionResult Response = Unauthorized();
             bool result = false;
             if(ModelState.IsValid)
             {
+                
                 result = service.ValidateUser(value.EmailId, value.Password);
+                if(result==true)
+                {
+
+                    var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("bd1a1ccf8095037f361a4d351e7c0de65f0776bfc2f478ea8d312c763bb6caca"));
+                    var signinCredentials = new SigningCredentials(secretKey, SecurityAlgorithms.HmacSha256);
+                    var tokenOptions = new JwtSecurityToken(
+                        issuer: "CodeMaze",
+                        audience: "https://localhost:5001",
+                        claims: new List<Claim>(),
+                        expires: DateTime.Now.AddMinutes(5),
+                        signingCredentials: signinCredentials
+                    );
+                    var tokenString = new JwtSecurityTokenHandler().WriteToken(tokenOptions);
+                    return Ok(new { Token = tokenString });
+
+
+                    
+                    
+                }
             }
-            return result;
+            return Response;
         }
         [HttpPost]
         [Route("/User/Signup")]

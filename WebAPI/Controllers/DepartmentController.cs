@@ -1,4 +1,5 @@
 ﻿using EnitityModelLib;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RepositoryLib;
 
@@ -7,6 +8,7 @@ namespace WebAPI.Controllers
 {
     [Route("/Department")]
     [ApiController]
+    [Authorize]
     public class DepartMentController : ControllerBase
     {
         DepartmentRepository service;

@@ -232,17 +232,17 @@ namespace EMS
             //bool removed = taskRepository.Remove(taskIdToRemove);
 
             //Modify Task
-            //Task taskToModify = new Task()
-            //{
-            //    TaskId = 3,
-            //    UserId = 3,
-            //    ProjectId = 1,
-            //    TaskDescription = "Entity Framework",
-            //    StartDate = new DateTime(2024, 2, 12),
-            //    EndDate = new DateTime(2024, 2, 21),
-            //    Status = "Completed"
-            //};
-            //taskRepository.Modify(taskToModify);
+            Task taskToModify = new Task()
+            {
+                TaskId = 3,
+                UserId = 3,
+                ProjectId = 1,
+                TaskDescription = "Entity Framework",
+                StartDate = new DateTime(2024, 2, 20),
+                EndDate = new DateTime(2024, 2, 25),
+                Status = "Completed"
+            };
+            taskRepository.Modify(taskToModify);
 
 
             //Find By TAsk Id
@@ -251,16 +251,49 @@ namespace EMS
             //Console.WriteLine(foundTask);
 
             //Gat All Task
-            IEnumerable<Task> allTasks = taskRepository.GetAllTasks();
-            foreach (var task in allTasks)
-            {
-                Console.WriteLine(task);
-            }
+            //IEnumerable<Task> allTasks = taskRepository.GetAllTasks();
+            //foreach (var task in allTasks)
+            //{
+            //    Console.WriteLine(task);
+            //}
+
+
+            //---------Project---------------//
+            //IProjectRepository proj = new ProjectRepository();
+            //Project project = new Project() { Title = "Matrimonal mgt. system" ,StartDate=new DateTime(2024,10,15) ,EndDate=new DateTime(2024,12,10)};
+            //proj.Add(project);
+
+            //proj.Modify(new Project() { ProjectId=1, Title = "ETiffin mgt. system", StartDate = new DateTime(2024, 10, 15), EndDate = new DateTime(2024, 11, 10) });
+            //Project project = new Project() { Title = "Educational mgt. system", StartDate = new DateTime(2024, 02, 22), EndDate = new DateTime(2024, 03, 05) };
+            //proj.Add(project);
+            //proj.Remove(2);
+            //Project project = new Project() { Title = "Educational mgt. system", StartDate = new DateTime(2024, 02, 22), EndDate = new DateTime(2024, 03, 05) };
+            //proj.Add(project);
+            //IEnumerable<Project> projList = proj.GetAllProjects();
+            //foreach (var item in projList)
+            //{
+            //    Console.WriteLine(item);
+
+            //}
+
+            //------------------projectmember----------------//
+            //IProjectMembersRepository projmem = new ProjectMembersRepository();
+            //ProjectMembers members = new ProjectMembers() { UserId=1,ProjectId=3};
+            //projmem.Add(members);
+            //ProjectMembers members = new ProjectMembers() { UserId = 2, ProjectId = 1};
+            //projmem.Add(members);
+            //projmem.Remove(3);
+            //IEnumerable<ProjectMembers> projMemList = projmem.GetAllProjectMembers();
+            //foreach (var item in projMemList)
+            //{
+            //    Console.WriteLine(item);
+
+            //}
         }
 
 
 
-    
+
     }
     }
 

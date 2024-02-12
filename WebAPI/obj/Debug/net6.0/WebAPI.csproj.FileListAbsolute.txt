@@ -76,3 +76,4 @@ C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\WebAPI\bin\Debug
 C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Akanksha\Desktop\Employee_Task_Management\CDAC-Project\WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

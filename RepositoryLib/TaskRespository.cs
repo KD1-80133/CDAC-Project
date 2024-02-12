@@ -60,15 +60,17 @@ namespace RepositoryLib
                 toBeModify.StartDate = task.StartDate;
                 toBeModify.EndDate = task.EndDate;
 
+                
                 TimeSpan duration = task.EndDate - task.StartDate;
                 int workHours = int.Parse((Math.Floor(duration.TotalDays) * 9).ToString());
-                task.WorkHours = workHours;
+                toBeModify.WorkHours = workHours;
 
                 toBeModify.Status = task.Status;
 
                 db.SaveChanges();
             }
         }
+
 
         public bool Remove(int taskId)
         {
