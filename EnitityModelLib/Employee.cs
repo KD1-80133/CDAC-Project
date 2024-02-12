@@ -16,33 +16,40 @@ namespace EnitityModelLib
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("EmpId")]
         public int EmpId { get; set; }
-        [Required]
+        
         [Column("FirstName")]
         public string FirstName { get; set; }
-        [Required]
+     
         [Column("LastName")]
         public string LastName { get; set; }
-        [Required]
+       
         [Column("DesignationId")]
         [ForeignKey("Designation")]
-        public int DesginationId { get; set; }
+        public int DesignationId { get; set; }
         public Designation Designation { get; set; }
-        [Required]
+        
         [Column("HireDate")]
         public DateTime HireDate { get; set; }
-        [Required]
+        
         [Column("IsResigned")]
         public bool IsResigned { get; set; }
-        [Required]
+       
         [Column("HourlyRate")]
         public int HourlyRate { get; set; }
-        [Required]
-        [Column("DepartmentId")]
+        
+        [Column("DeptId")]
         [ForeignKey("Department")]
-        public int DepartmentId { get; set; }
+        public int DeptId { get; set; }
         public Department Department { get; set; }
-        [Required]
+
+        
         [Column("ManagerId")]
         public int ManagerId { get; set; }
+
+        public override string ToString()
+        {
+            return $"EmpId: {EmpId}, FirstName: {FirstName}, LastName: {LastName}, DesignationId: {DesignationId}, HireDate: {HireDate}, IsResigned: {IsResigned}, HourlyRate: {HourlyRate}, DeptId: {DeptId}, ManagerId: {ManagerId}";
+        }
+
     }
 }

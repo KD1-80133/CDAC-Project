@@ -18,5 +18,9 @@ namespace EnitityModelLib
         [Required]
         [Column("DeptName")]
         public string DeptName { get; set; }
+        public override string ToString()
+        {
+            return $"DeptId: {DeptId}, DeptName: {DeptName}";
+        }
     }
 }

@@ -53,16 +53,63 @@ namespace WebAPI.Controllers
             }
             return result;
         }
+        //RESET USER
+        [HttpPost]
+        [Route("Reset")]
+        public bool Post([FromBody] ResetPassword value)
+        {
+            bool result = false;
+            if (ModelState.IsValid)
+            {
+                result = service.ResetPassword(value.EmailId, value.OTP, value.Password);
+            }
+            return result;
+        }
+
+        //GENERATE OTP
+        [HttpPost()]
+        [Route("GenerateOTP")]
+        public string Post([FromBody] GenerateOTP value)
+        {
+            string result = "";
+            if (ModelState.IsValid)
+            {
+                string otp = service.GenerateOTP(value.EmailId);
+            }
+            return result;
+        }
+
+
+        //CHANGE PASSWORD   
+        [HttpPost]
+        [Route("ChangePassword")]
+        public bool Post([FromBody] ChangePassword value)
+        {
+            bool result = true;
+            if (ModelState.IsValid)
+            {
+                result = service.ChangePassword(value.EmailId, value.OldPassword, value.NewPassword);
+
+            }
+            return result;
+        }
         // PUT api/<AccountController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
         }
 
-        // DELETE api/<AccountController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        //DELETE USER
+        // DELETE api/<AccountController>/EmailId
+        [HttpDelete("{EmailId}")]
+        public bool Delete(string EmailId)
         {
+            bool result = false;
+            if (ModelState.IsValid)
+            {
+                result = service.DeleteUser(EmailId);
+            }
+            return result;
         }
     }
 }

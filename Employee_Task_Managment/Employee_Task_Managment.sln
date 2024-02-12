@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryLibTests", "..\Re
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebAPI", "WebAPI", "{F2A2E176-941F-4857-AF50-2591FEC243B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "..\WebAPI\WebAPI.csproj", "{13C929AC-D8CD-438C-9A14-0457A4806855}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "..\WebAPI\WebAPI.csproj", "{13C929AC-D8CD-438C-9A14-0457A4806855}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

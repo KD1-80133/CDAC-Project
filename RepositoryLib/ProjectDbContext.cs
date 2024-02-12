@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Task = EnitityModelLib.Task;
 
 namespace RepositoryLib
 {
@@ -26,5 +27,8 @@ namespace RepositoryLib
         }
         public DbSet<Department> Departments { get; set; }
         public DbSet<Designation> Designations { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<BankAccount> BankAccounts { get; set; }
+        public DbSet<Task> Tasks { get; set; }
     }
 }

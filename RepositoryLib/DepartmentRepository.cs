@@ -1,23 +1,26 @@
-﻿using EnitityModelLib;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EnitityModelLib;
+
+
 
 namespace RepositoryLib
 {
     public interface IDepartmentRepository
     {
-        bool Add(EnitityModelLib.Department department);
-        bool Modify(EnitityModelLib.Department department);
-        bool Remove(int deptId);
+        bool Add(Department department);
+        bool Modify(Department Department);
+        void Remove(int deptid);
+        IEnumerable<Department> GetDepartments();
 
-        IEnumerable<EnitityModelLib.Department> GetAllDepartments();
+        Department FindById(int deptId);
 
+        //bool Remove(Department Department);
 
     }
-
     public class DepartmentRepository : IDepartmentRepository
     {
         ProjectDbContext db;
@@ -28,27 +31,50 @@ namespace RepositoryLib
         public bool Add(Department department)
         {
             db.Add(department);
-            db.SaveChanges();
+            Console.WriteLine(
+            db.SaveChanges());
             return true;
         }
 
-        public IEnumerable<Department> GetAllDepartments()
+
+
+
+
+
+        public Department FindById(int deptId)
         {
-           return db.Departments.ToList<Department>();
+            return db.Departments.Find(deptId);
+        }
+
+        public IEnumerable<Department> GetDepartments()
+        {
+            return db.Departments.ToList<Department>();
         }
 
         public bool Modify(Department department)
         {
-            Department tobeModify= db.Departments.Where(dept=>department.DeptId==dept.DeptId).ToList().FirstOrDefault<Department>();
+            Department tobeModify = db.Departments.Where(dept => department.DeptId == dept.DeptId).ToList().FirstOrDefault<Department>();
             tobeModify.DeptName = department.DeptName;
             db.SaveChanges();
             return true;
         }
 
-        public bool Remove(int deptId)
+
+
+        public void Remove(int deptId)
         {
-            db.Departments.Remove(db.Departments.Find(deptId));
-            return true;
+            Department dept = FindById(deptId);
+            Console.WriteLine(dept);
+            db.Remove(dept);
+            db.SaveChanges();
+
         }
+
+        /*        public bool Remove(Department department)
+        {
+            db.Remove(department);
+            db.SaveChanges();
+            return true;
+        }*/
     }
 }

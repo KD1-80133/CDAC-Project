@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EnitityModelLib
 {
-    [Table("Designation")]
+    [Table("T_Designation")]
     public class Designation
     {
         [Key]
@@ -17,6 +17,12 @@ namespace EnitityModelLib
         public int DesignationId { get; set; }
         [Required]
         [Column("DesignationName")]
-        public string  DesignationName { get; set; }
+        public string DesignationName { get; set; }
+
+        public override string ToString()
+        {
+            return $"DesignationId: {DesignationId}, DesignationName: {DesignationName}";
+        }
+
     }
 }

@@ -7,12 +7,14 @@ using System.Threading.Tasks;
 
 namespace RepositoryLib
 {
-    public  interface IDesignationRepository
+    public interface IDesignationRepository
     {
-        bool Add(EnitityModelLib.Designation designation);
-        bool Modify(EnitityModelLib.Designation designation);
-        IEnumerable<EnitityModelLib.Designation> GetDesignations();
-        bool Remove(int DesignationId);
+        bool Add(Designation designation);
+        bool Modify(Designation designation);
+        void Remove(int desgId);
+        IEnumerable<Designation> GetDesignations();
+
+        Designation FindById(int desgId);
     }
     public class DesignationRepository : IDesignationRepository
     {
@@ -24,27 +26,36 @@ namespace RepositoryLib
         public bool Add(Designation designation)
         {
             db.Add(designation);
-            //db.SaveChanges();
+            Console.WriteLine(db.SaveChanges());
             return true;
         }
+        public Designation FindById(int desgId)
+        {
+            return db.Designations.Find(desgId);
+        }
+
+
 
         public IEnumerable<Designation> GetDesignations()
         {
             return db.Designations.ToList<Designation>();
+
         }
 
         public bool Modify(Designation designation)
         {
-            Designation tobeModify = db.Designations.Where(desi => designation.DesignationId == desi.DesignationId).ToList().FirstOrDefault<Designation>();
+            Designation tobeModify = db.Designations.Where(desg => designation.DesignationId == desg.DesignationId).ToList().FirstOrDefault<Designation>();
             tobeModify.DesignationName = designation.DesignationName;
             db.SaveChanges();
             return true;
         }
 
-        public bool Remove(int DesignationId)
+        public void Remove(int desgId)
         {
-            db.Departments.Remove(db.Departments.Find(DesignationId));
-            return true;
+            Designation desg = FindById(desgId);
+            Console.WriteLine(desg);
+            db.Remove(desg);
+            db.SaveChanges();
         }
     }
 }
