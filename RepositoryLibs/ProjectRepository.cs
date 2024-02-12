@@ -13,6 +13,7 @@ namespace RepositoryLib
         bool Modify(EntityModelLib.Project project);
         bool Remove(int projectId);
         IEnumerable<EntityModelLib.Project> GetAllProjects();
+        Project FindById(int ProjId);
     }
 
     public class ProjectRepository : IProjectRepository
@@ -36,10 +37,11 @@ namespace RepositoryLib
 
         public bool Modify(Project project)
         {
-            Project tobeModify = db.Projects.Where(proj => proj.ProjectId == project.ProjectId).ToList().FirstOrDefault<Project>();
+            Console.WriteLine(project);
+            Project tobeModify = db.Projects.Where(proj => project.ProjectId == proj.ProjectId).ToList().FirstOrDefault<Project>();
             tobeModify.Title = project.Title;
             tobeModify.StartDate = project.StartDate;
-
+            tobeModify.EndDate = project.EndDate;
             db.SaveChanges();
             return true;
         }

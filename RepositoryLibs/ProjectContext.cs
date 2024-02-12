@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Task = EntityModelLib.Task;
 
 namespace RepositoryLib
 {
@@ -25,6 +26,8 @@ namespace RepositoryLib
 
         public DbSet<Project> Projects { get; set; }
         public DbSet<ProjectMembers> ProjectMembers { get; set; }
+        public DbSet<Task> Tasks { get; set; }
+        public DbSet<BankAccount> BankAccounts { get; set; }
 
     }
 }

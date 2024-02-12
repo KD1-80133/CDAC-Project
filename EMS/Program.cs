@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Task = EntityModelLib.Task;
 
 
 
@@ -56,16 +57,66 @@ namespace EMS
 
             //emp.Modify(new Employee() { FirstName = "Nivedita", LastName = "chougule", DesignationId = 2,IsResigned = true });
 
-            IProjectRepository proj = new ProjectRepository();
-            Project project = new Project() { Title = "Matrimonal mgt. system" ,StartDate=new DateTime(2024,10,15) ,EndDate=new DateTime(2024,12,10)};
+            //IProjectRepository proj = new ProjectRepository();
+            //Project project = new Project() { Title = "Matrimonal mgt. system" ,StartDate=new DateTime(2024,10,15) ,EndDate=new DateTime(2024,12,10)};
             //proj.Add(project);
 
-            proj.Modify()
+            //proj.Modify(new Project() { ProjectId=1, Title = "ETiffin mgt. system", StartDate = new DateTime(2024, 10, 15), EndDate = new DateTime(2024, 11, 10) });
+            //Project project = new Project() { Title = "Educational mgt. system", StartDate = new DateTime(2024, 02, 22), EndDate = new DateTime(2024, 03, 05) };
+            //proj.Add(project);
+            //proj.Remove(2);
+            //Project project = new Project() { Title = "Educational mgt. system", StartDate = new DateTime(2024, 02, 22), EndDate = new DateTime(2024, 03, 05) };
+            //proj.Add(project);
+            //IEnumerable<Project> projList = proj.GetAllProjects();
+            //foreach (var item in projList)
+            //{
+            //    Console.WriteLine(item);
+
+            //}
+
+            //IProjectMembersRepository projmem = new ProjectMembersRepository();
+            //ProjectMembers members = new ProjectMembers() { UserId=1,ProjectId=3};
+            //projmem.Add(members);
+            //ProjectMembers members = new ProjectMembers() { UserId = 2, ProjectId = 1};
+            //projmem.Add(members);
+            //projmem.Remove(3);
+            //IEnumerable<ProjectMembers> projMemList = projmem.GetAllProjectMembers();
+            //foreach (var item in projMemList)
+            //{
+            //    Console.WriteLine(item);
+
+            //}
 
 
+            //ITaskRepository task = new TaskRepository();
+            //Task newTask = new Task() { };
 
 
+            //IBankAccountRepository bankAccount = new BankAccountRepository();
+            //BankAccount baccount = new BankAccount() { AccountNo = 123456789, AccountHolderName = "Nivedita patil", AccountType = "Saving", BankName = "SBI", IFSCCode = 456987, UserId = 4 };
+            //bankAccount.Add(baccount);
+            //BankAccount baccount = new BankAccount() { AccountNo = 987654321, AccountHolderName = "Nivedita Chougule", AccountType = "Current", BankName = "BOI", IFSCCode = 123654, UserId = 3 };
+            //bankAccount.Add(baccount);
 
+            // bankAccount.Remove(987654321);
+            //bankAccount.Modify(new BankAccount() { AccountNo = 123456789, AccountHolderName = "Nivedita patil", AccountType = "Current", BankName = "BOB", IFSCCode = 456987, UserId = 5 });
+            //BankAccount baccount = new BankAccount() { AccountNo = 987654321, AccountHolderName = "Nivedita Chougule", AccountType = "Current", BankName = "BOI", IFSCCode = 123654, UserId = 3 };
+            //bankAccount.Add(baccount);
+            //IEnumerable<BankAccount> accountList = bankAccount.GetAllAccount();
+            //foreach (var item in accountList)
+            //{
+            //    Console.WriteLine(item);
+
+            //}
+
+            ITaskRepository task = new TaskRepository();
+            //Task tk = new Task() { UserId=1,TaskDescription="This is web based application which provide online Tiffin services",StartDate=new DateTime(2024,2,21),EndDate=new DateTime(2024,03,05),Status="In Progress",ProjectId=1};
+            //task.Add(tk);
+            //Task tk = new Task() { UserId = 2, TaskDescription = "This is web based application which provide online Educational facilities", StartDate = new DateTime(2024, 2, 2), EndDate = new DateTime(2024, 02, 22), Status = "completed", ProjectId = 3 };
+            //task.Add(tk);
+
+            //task.Remove(2);
+            task.Modify(new Task() { TaskId = 4 ,UserId = 3, TaskDescription = "This is web based application which serves Educational facilities", StartDate = new DateTime(2024, 2, 3), EndDate = new DateTime(2024, 02, 20), Status = "in progress", ProjectId = 3 }); ;
 
 
 
