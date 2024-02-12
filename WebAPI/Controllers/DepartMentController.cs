@@ -23,7 +23,7 @@ namespace WebAPI.Controllers
 
         // GET api/<DepartMentController>/5
         [HttpGet("{id}")]
-         public Department Get(int id)
+         public Department GetById(int id)
          {
              
            return service.FindById(id);
@@ -31,11 +31,11 @@ namespace WebAPI.Controllers
          }
         //GET ALL DEPARTMENTS
         [HttpGet]
-        [Route(" ")]
-        public IEnumerable<Department> GetDeptList()
+        [Route("")]
+        public IEnumerable<Department> Get()
         {
-            IEnumerable<Department> dept = service.GetDepartments();
-            return dept;
+             return service.GetDepartments();
+            
         }
        
 
