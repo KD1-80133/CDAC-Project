@@ -44,7 +44,7 @@ namespace RepositoryLib
 
         public bool Modify(Designation designation)
         {
-            Designation tobeModify = db.Designations.Where(dept => designation.DesignationId == designation.DesignationId).ToList().FirstOrDefault<Designation>();
+            Designation tobeModify = db.Designations.Where(desg => designation.DesignationId == desg.DesignationId).ToList().FirstOrDefault<Designation>();
             tobeModify.DesignationName = designation.DesignationName;
             db.SaveChanges();
             return true;

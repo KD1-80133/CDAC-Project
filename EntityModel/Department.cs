@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EntityModelLib
 {
-    [Table("Department")]
+    [Table("T_Department")]
     public class Department
     {
         [Key]
