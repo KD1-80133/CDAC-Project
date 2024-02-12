@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EntityModelLib")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+60f46020eb2bfeca9c3b891774dd6753d7790f20")]
 [assembly: System.Reflection.AssemblyProductAttribute("EntityModelLib")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EntityModelLib")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -50,10 +50,10 @@ namespace EMS
              Designation desg = new Designation() { DesignationId = 1, DesignationName = "project manager" };
              designation.Modify(desg);*/
 
-             /* IEmployeeRepository employee = new EmployeeRepository();
-              Employee emp = new Employee() { FirstName = "Quality", LastName = "Analyst",DesignationId=3,DeptId=1,IsResigned=false ,HourlyRate=5000,ManagerId=1,HireDate=new DateTime(2005,10,1)};
-              employee.Add(emp);
-             */
+            /* IEmployeeRepository employee = new EmployeeRepository();
+             Employee emp = new Employee() { FirstName = "Quality", LastName = "Analyst",DesignationId=3,DeptId=1,IsResigned=false ,HourlyRate=5000,ManagerId=1,HireDate=new DateTime(2005,10,1)};
+             employee.Add(emp);
+            */
             /*            IEmployeeRepository employee = new EmployeeRepository();
                         IEnumerable<Employee> emps=employee.GetAllEmployees();
                         foreach (var emp in emps)
@@ -68,11 +68,51 @@ namespace EMS
             /*             IEmployeeRepository employee = new EmployeeRepository();
                            employee.Remove(7);*/
 
-          /* IEmployeeRepository employee = new EmployeeRepository();
-            Employee emp = new Employee { EmpId = 6, FirstName = "DB", LastName = "Admin", DesignationId = 1, DeptId = 1, IsResigned = false, HourlyRate = 3000, ManagerId = 1 };
-            employee.Modify(emp);*/
+            /* IEmployeeRepository employee = new EmployeeRepository();
+              Employee emp = new Employee { EmpId = 6, FirstName = "DB", LastName = "Admin", DesignationId = 1, DeptId = 1, IsResigned = false, HourlyRate = 3000, ManagerId = 1 };
+              employee.Modify(emp);*/
+
+            /*IProjectRepository project = new ProjectRepository();
+            Project proj = new Project { Title = "project1", StartDate = new DateTime(2020, 10, 1), EndDate = new DateTime(2020, 11, 1) };
+            project.Add(proj);*/
 
 
-}
-}
+            //----------BankAccount-------------//
+            //-------ADD AccountDetails--------//
+           /* IBankAccountRepository bankAccount = new BankAccountRepository();
+            BankAccount bank = new BankAccount() { AccountNo=1,AccountHolderName="Akanksha",AccountType= "Savings", BankName = "SBI", IFSCCode = 123456,UserId=2 };
+            bankAccount.Add(bank);*/
+
+
+
+            // Modifying a BankAccount
+           /* IBankAccountRepository bankAccountRepository = new BankAccountRepository();
+            BankAccount bankAccount = new BankAccount() { AccountNo = 1, AccountHolderName = "Aknksha1", AccountType = "Savings", BankName = "BOI", IFSCCode = 654321, UserId = 3 };
+            bankAccountRepository.Modify(bankAccount);*/
+
+
+
+            // BankAccount list
+            /*IBankAccountRepository bankAccountRepository = new BankAccountRepository();
+            IEnumerable<BankAccount> bankAccounts = bankAccountRepository.GetAllAccount();
+
+            foreach (var bankAccount in bankAccounts)
+            {
+                Console.WriteLine(bankAccount);
+            }*/
+
+            //find By AccountNo
+            /*IBankAccountRepository bankAccountRepository = new BankAccountRepository();
+           BankAccount bankAccount = bankAccountRepository.FindById(1);*/
+
+
+            //remove bankaccount
+
+            /*IBankAccountRepository bankAccountRepository = new BankAccountRepository();
+            bool removed = bankAccountRepository.Remove(1);*/
+
+
+
+        }
+    }
 }

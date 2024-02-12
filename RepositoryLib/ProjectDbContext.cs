@@ -27,6 +27,10 @@ namespace RepositoryLib
         public DbSet<EntityModelLib.Department> Departments { get; set; }
         public DbSet<EntityModelLib.Designation> Designations { get; set; }
         public DbSet<EntityModelLib.Employee> Employees { get; set; }
+        public DbSet<Project> Projects { get; set; }
+        public DbSet<BankAccount> BankAccounts { get; set; }
+        public DbSet<EntityModelLib.Tasks> Tasks { get; set; }
+
 
 
     }
