@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "DAn3bHpWi24DAVkoZxrG2588UJ8zIq7rqVddD7rQGDowpd0gASG6KQWBEX2+qXviAECEcJAr7rSIel068GHrnQ==",
+  "dgSpecHash": "curAtZGXN7/6B7jWZ4ySP9E234DT4UkDlO46PQke4ySEFeGVtBPsNmktE6z7pReipXRpZdD1Fx+avL9YbaCosQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\nived\\OneDrive\\Desktop\\CDAC-Project\\CDAC-Project\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nived\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\nived\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\nived\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.9\\microsoft.aspnetcore.authentication.jwtbearer.6.0.9.nupkg.sha512",
     "C:\\Users\\nived\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\nived\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\nived\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.5\\microsoft.data.sqlclient.5.1.5.nupkg.sha512",

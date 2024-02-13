@@ -1,4 +1,5 @@
 ﻿using EntityModelLib;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RepositoryLib;
 
@@ -8,9 +9,9 @@ namespace WebAPI.Controllers
 {
     [Route("/Designation")]
     [ApiController]
+    [Authorize]
     public class DesignationController : ControllerBase
     {
-        // GET: api/<DesignationController>
         DesignationRepository service;
 
         public DesignationController()
@@ -19,7 +20,7 @@ namespace WebAPI.Controllers
         }
         // GET: api/<DesignationController>
         [HttpGet]
-        [Route(" ")]
+        [Route("")]
         public IEnumerable<Designation> Get()
         {
             return service.GetAllDesignations();

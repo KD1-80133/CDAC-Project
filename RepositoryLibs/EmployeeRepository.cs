@@ -43,6 +43,7 @@ namespace RepositoryLib
             tobeModify.LastName = employee.LastName;
             tobeModify.DesignationId = employee.DesignationId;
             tobeModify.IsResigned = employee.IsResigned;
+            tobeModify.UserId = employee.UserId;
             /* tobeModify.HourlyRate = employee.HourlyRate;
              tobeModify.DeptId = employee.DeptId;
              tobeModify.ManagerId = employee.ManagerId;*/

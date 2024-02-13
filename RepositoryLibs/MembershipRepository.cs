@@ -17,7 +17,7 @@ namespace RepositoryLib
             int rowsAffected = cmd.ExecuteNonQuery();
             Console.WriteLine(rowsAffected);
             connection.Close();
-            if (rowsAffected == 1)
+            if (rowsAffected >0)
             {
                 return true;
             }

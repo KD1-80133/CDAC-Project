@@ -76,3 +76,4 @@ C:\Users\nived\OneDrive\Desktop\CDAC-Project\CDAC-Project\WebAPI\bin\Debug\net6.
 C:\Users\nived\OneDrive\Desktop\CDAC-Project\CDAC-Project\WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\nived\OneDrive\Desktop\CDAC-Project\CDAC-Project\WebAPI\bin\Debug\net6.0\EntityModelLib.dll
 C:\Users\nived\OneDrive\Desktop\CDAC-Project\CDAC-Project\WebAPI\bin\Debug\net6.0\EntityModelLib.pdb
+C:\Users\nived\OneDrive\Desktop\CDAC-Project\CDAC-Project\WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

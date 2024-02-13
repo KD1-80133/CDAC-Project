@@ -52,5 +52,9 @@ namespace EntityModelLib
         [Required]
         [Column("ManagerId")]
         public int ManagerId { get; set; }
+
+        [Required]
+        [Column("UserId")]
+        public int UserId { get; set; }
     }
 }

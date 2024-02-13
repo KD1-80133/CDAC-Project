@@ -12,8 +12,8 @@ namespace RepositoryLib
         bool Add(BankAccount bankAccount);
         IEnumerable<BankAccount> GetAllAccount();
         void Modify(BankAccount bankAccount);
-        BankAccount FindById(int accountNO);
-        bool Remove(int accountNo);
+        BankAccount FindById(string accountNO);
+        bool Remove(string accountNo);
     }
 
     public class BankAccountRepository : IBankAccountRepository
@@ -32,7 +32,7 @@ namespace RepositoryLib
             return true;
         }
 
-        public BankAccount FindById(int accountNo)
+        public BankAccount FindById(string accountNo)
         {
             return db.BankAccounts.FirstOrDefault(account => account.AccountNo == accountNo);
         }
@@ -59,7 +59,7 @@ namespace RepositoryLib
             }
         }
 
-        public bool Remove(int accountNo)
+        public bool Remove(string accountNo)
         {
             BankAccount account = FindById(accountNo);
 
