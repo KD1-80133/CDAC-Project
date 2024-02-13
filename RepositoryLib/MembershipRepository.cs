@@ -19,7 +19,7 @@ namespace RepositoryLib
             cmd.Parameters.AddWithValue("@email", email);
             int rowsAffected = cmd.ExecuteNonQuery();
             connection.Close();
-            if (rowsAffected == 1)
+            if (rowsAffected >0)
             {
                 return true;
             }
