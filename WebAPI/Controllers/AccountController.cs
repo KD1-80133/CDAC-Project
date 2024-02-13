@@ -14,11 +14,16 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+
+
     public class AccountController : ControllerBase
     {
+        IConfiguration config;
+
         MembershipRepository service;
-        public AccountController()
+        public AccountController(IConfiguration config)
         {
+            this.config = config;
             service = new MembershipRepository();
         }
         // GET: api/<AccountController>
@@ -34,44 +39,57 @@ namespace WebAPI.Controllers
         {
             return "value";
         }
-
         // POST api/<AccountController>
         [HttpPost]
         [AllowAnonymous]
 
         [Route("/User/Login")]
-        
+
         public IActionResult Post([FromBody] Login value)
         {
-            IActionResult Response = Unauthorized();
+            IActionResult response = Unauthorized();
             bool result = false;
-            if(ModelState.IsValid)
+
+            if (ModelState.IsValid)
             {
-                
                 result = service.ValidateUser(value.EmailId, value.Password);
-                if(result==true)
+
+                if (result)
                 {
-
-                    var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("bd1a1ccf8095037f361a4d351e7c0de65f0776bfc2f478ea8d312c763bb6caca"));
-                    var signinCredentials = new SigningCredentials(secretKey, SecurityAlgorithms.HmacSha256);
-                    var tokenOptions = new JwtSecurityToken(
-                        issuer: "CodeMaze",
-                        audience: "https://localhost:5001",
-                        claims: new List<Claim>(),
-                        expires: DateTime.Now.AddMinutes(5),
-                        signingCredentials: signinCredentials
-                    );
-                    var tokenString = new JwtSecurityTokenHandler().WriteToken(tokenOptions);
-                    return Ok(new { Token = tokenString });
-
-
-                    
-                    
+                    var token = GenerateJwtToken(value.EmailId);
+                    return Ok(new { Token = token });
                 }
             }
-            return Response;
+
+            return response;
         }
-        [HttpPost]
+
+        private string GenerateJwtToken(string email)
+        {
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["Jwt:Key"]));
+            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+
+            var claims = new[]
+            {
+            new Claim(JwtRegisteredClaimNames.Sub, email),
+            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+            
+        };
+
+            var token = new JwtSecurityToken(
+                config["Jwt:Issuer"],
+                config["Jwt:Audience"],
+                claims,
+                expires: DateTime.Now.AddMinutes(15),
+                signingCredentials: credentials
+            );
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+    
+
+    
+    [HttpPost]
         [Route("/User/Signup")]
         public bool Post([FromBody] Signup value)
         {
