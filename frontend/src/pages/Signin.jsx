@@ -17,12 +17,19 @@ export function Signin() {
         } else {
             // make the api call
             const result = await signinUser(email, password)
+            // console.log(result.data.token);
 
-            navigate('/home')
-
+            if (result['status'] == 'success') {
+                const Token = result.data.token;
+                sessionStorage.token = Token
+                toast.success('Welcome user')
+                navigate('/home')
+            }
+            else {
+                toast.error(result['error'])
+            }
         }
     }
-
     return (
         <>
             <h1 className="title">Signin</h1>

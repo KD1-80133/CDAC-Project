@@ -1,6 +1,9 @@
-const SERVER_URL = 'http://localhost:5037'
+import config from "../config";
+
+
+//const SERVER_URL = 'http://localhost:5037'
 export function createUrl(path) {
-    return `${SERVER_URL}/${path}`
+    return `${config.server}/${path}`
 }
 export function createError(error) {
     return { status: 'error', error }

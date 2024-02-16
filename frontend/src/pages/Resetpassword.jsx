@@ -46,4 +46,4 @@ export function Resetpassword() {
     )
 }
 
-export default Changepassword;
+export default Resetpassword;

@@ -18,11 +18,11 @@ export async function signupUser(userName, password, mobileNo, emailId, roleId) 
     }
 }
 
-export async function signinUser(email, password) {
+export async function signinUser(emailId, password) {
     try {
         const url = createUrl('User/Login')
         const body = {
-            email,
+            emailId,
             password,
         }
         const response = await axios.post(url, body)
