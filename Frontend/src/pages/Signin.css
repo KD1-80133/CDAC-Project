@@ -1,0 +1,78 @@
+/* Body Styling */
+body {
+    background: linear-gradient(to right,#477fa5,black); /* Add a subtle gradient */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Default text color */
+}
+
+/* Navbar Styling */
+
+/* Title Styling */
+.title {
+    font-family: 'Pacifico', cursive; /* Choose a distinctive font */
+    color: black; /* White text color */
+    text-align: center;
+    margin-top: 5rem;
+    font-size: 2.5rem;
+}
+
+/* Button Styling */
+.btn-primary {
+    background: linear-gradient(to right, #3498db, #2980b9); /* Gradient button */
+    border-color: #2980b9;
+    padding: 0.8rem 2rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(to right, #2980b9, #3498db); /* Gradient on hover */
+}
+
+/* Link Styling */
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #f1c40f; /* Yellow on hover */
+}
+
+/* Image and Form Styling */
+.col-md-8 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
+}
+
+.col-md-4 {
+    margin-top: 50px;
+    max-width: 450px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Responsive Adjustments (Optional) */
+@media (max-width: 767px) {
+    .col-md-8,
+    .col-md-4 {
+        width: 100%;
+    }
+    
+    .col-md-4 {
+        padding: 20px;
+    }
+}

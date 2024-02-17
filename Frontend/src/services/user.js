@@ -33,3 +33,20 @@ export async function signinUser(emailId, password) {
         return createError(ex)
     }
 }
+
+export async function changePassword(emailId, oldpassword,newpassword) {
+    
+    try {
+        const url = createUrl('user/ChangePassword')
+        const body = {
+            emailId,
+            oldpassword,
+            newpassword
+        }
+        const response = await axios.post(url, body)
+        console.log(response.data);
+        return createSuccess(response.data)
+    } catch (ex) {
+        return createError(ex)
+    }
+}
