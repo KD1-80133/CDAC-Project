@@ -51,9 +51,9 @@ namespace EMS
 
             //}
 
-            //IEmployeeRepository emp = new EmployeeRepository();
-            //Employee employee = new Employee() { FirstName = "shital", LastName = "chougule", DesignationId = 3, HireDate = DateTime.Now, IsResigned = false, HourlyRate = 500, DepartmentId = 2, ManagerId = 2 };
-            //emp.Add(employee);
+            IEmployeeRepository emp = new EmployeeRepository();
+            Employee employee = new Employee() { FirstName = "shital", LastName = "chougule", DesignationId = 3, HireDate = DateTime.Now, IsResigned = false, HourlyRate = 500, DepartmentId = 2, ManagerId = 2 };
+            emp.Add(employee);
 
             //emp.Modify(new Employee() { FirstName = "Nivedita", LastName = "chougule", DesignationId = 2,IsResigned = true });
 

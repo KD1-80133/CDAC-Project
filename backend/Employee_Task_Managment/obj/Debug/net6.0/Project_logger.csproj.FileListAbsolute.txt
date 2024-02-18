@@ -62,3 +62,16 @@ C:\Users\nived\OneDrive\Desktop\CDAC-Project\CDAC-Project\Employee_Task_Managmen
 C:\Users\nived\OneDrive\Desktop\CDAC-Project\CDAC-Project\Employee_Task_Managment\obj\Debug\net6.0\refint\Project_logger.dll
 C:\Users\nived\OneDrive\Desktop\CDAC-Project\CDAC-Project\Employee_Task_Managment\obj\Debug\net6.0\Project_logger.pdb
 C:\Users\nived\OneDrive\Desktop\CDAC-Project\CDAC-Project\Employee_Task_Managment\obj\Debug\net6.0\ref\Project_logger.dll
+C:\Users\nived\OneDrive\Desktop\CDAC-Project\CDAC-Project\backend\Employee_Task_Managment\bin\Debug\net6.0\Project_logger.deps.json
+C:\Users\nived\OneDrive\Desktop\CDAC-Project\CDAC-Project\backend\Employee_Task_Managment\bin\Debug\net6.0\Project_logger.dll
+C:\Users\nived\OneDrive\Desktop\CDAC-Project\CDAC-Project\backend\Employee_Task_Managment\bin\Debug\net6.0\Project_logger.pdb
+C:\Users\nived\OneDrive\Desktop\CDAC-Project\CDAC-Project\backend\Employee_Task_Managment\obj\Debug\net6.0\Project_logger.csproj.AssemblyReference.cache
+C:\Users\nived\OneDrive\Desktop\CDAC-Project\CDAC-Project\backend\Employee_Task_Managment\obj\Debug\net6.0\Project_logger.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nived\OneDrive\Desktop\CDAC-Project\CDAC-Project\backend\Employee_Task_Managment\obj\Debug\net6.0\Project_logger.AssemblyInfoInputs.cache
+C:\Users\nived\OneDrive\Desktop\CDAC-Project\CDAC-Project\backend\Employee_Task_Managment\obj\Debug\net6.0\Project_logger.AssemblyInfo.cs
+C:\Users\nived\OneDrive\Desktop\CDAC-Project\CDAC-Project\backend\Employee_Task_Managment\obj\Debug\net6.0\Project_logger.csproj.CoreCompileInputs.cache
+C:\Users\nived\OneDrive\Desktop\CDAC-Project\CDAC-Project\backend\Employee_Task_Managment\obj\Debug\net6.0\Project_logger.sourcelink.json
+C:\Users\nived\OneDrive\Desktop\CDAC-Project\CDAC-Project\backend\Employee_Task_Managment\obj\Debug\net6.0\Project_logger.dll
+C:\Users\nived\OneDrive\Desktop\CDAC-Project\CDAC-Project\backend\Employee_Task_Managment\obj\Debug\net6.0\refint\Project_logger.dll
+C:\Users\nived\OneDrive\Desktop\CDAC-Project\CDAC-Project\backend\Employee_Task_Managment\obj\Debug\net6.0\Project_logger.pdb
+C:\Users\nived\OneDrive\Desktop\CDAC-Project\CDAC-Project\backend\Employee_Task_Managment\obj\Debug\net6.0\ref\Project_logger.dll

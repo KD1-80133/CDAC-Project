@@ -10,6 +10,9 @@ import Task from "./pages/Task";
 import Project from "./pages/Project";
 import AddTask from "./pages/AddTask";
 import AddProject from "./pages/AddProject";
+import Employee from "./pages/Employee";
+import AddEmp from "./pages/AddEmp";
+import EditEmp from "./pages/EditEmp";
 
 function App() {
   return (
@@ -27,6 +30,9 @@ function App() {
         <Route path='/addtask' element={<AddTask />} />
         <Route path='/project' element={<Project />} />
         <Route path='/addproject' element={<AddProject />} />
+        <Route path='/employee' element={<Employee />} />
+        <Route path='/addemployee' element={<AddEmp />} />
+        <Route path='/editemp/:id' element={<EditEmp/>}/>
 
       </Routes>
       <ToastContainer />

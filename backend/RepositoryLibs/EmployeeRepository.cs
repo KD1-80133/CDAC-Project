@@ -35,22 +35,58 @@ namespace RepositoryLib
             return db.Employees.ToList<Employee>();
         }
 
+
+        //public void Modify(Employee employee)
+        //{
+        //    Console.WriteLine(employee);
+        //    Employee tobeModify = db.Employees.Where(emps => employee.EmpId == emps.EmpId).ToList().FirstOrDefault<Employee>();
+        //    tobeModify.FirstName = employee.FirstName;
+        //    tobeModify.LastName = employee.LastName;
+        //    tobeModify.DesignationId = employee.DesignationId;
+        //    tobeModify.IsResigned = employee.IsResigned;
+        //    tobeModify.HourlyRate = employee.HourlyRate;
+        //    tobeModify.DepartmentId = employee.DepartmentId;
+        //    tobeModify.ManagerId = employee.ManagerId;
+
+        //    Console.WriteLine(tobeModify);
+        //    db.SaveChanges();
+
+        //}
         public void Modify(Employee employee)
         {
-            Console.WriteLine(employee);
-            Employee tobeModify = db.Employees.Where(emps => employee.DepartmentId == emps.DepartmentId).ToList().FirstOrDefault<Employee>();
-            tobeModify.FirstName = employee.FirstName;
-            tobeModify.LastName = employee.LastName;
-            tobeModify.DesignationId = employee.DesignationId;
-            tobeModify.IsResigned = employee.IsResigned;
-            tobeModify.UserId = employee.UserId;
-            /* tobeModify.HourlyRate = employee.HourlyRate;
-             tobeModify.DeptId = employee.DeptId;
-             tobeModify.ManagerId = employee.ManagerId;*/
-            Console.WriteLine(tobeModify);
-            db.SaveChanges();
+            Employee tobeModify = db.Employees.FirstOrDefault(emps => employee.EmpId == emps.EmpId);
+            if (tobeModify != null)
+            {
+                tobeModify.FirstName = employee.FirstName;
+                tobeModify.LastName = employee.LastName;
+                tobeModify.DesignationId = employee.DesignationId;
+                tobeModify.IsResigned = employee.IsResigned;
+                tobeModify.HourlyRate = employee.HourlyRate;
+                tobeModify.DepartmentId = employee.DepartmentId;
+                tobeModify.ManagerId = employee.ManagerId;
+                tobeModify.HireDate = employee.HireDate; // Assign the new HireDate directly
 
+                db.SaveChanges();
+            }
         }
+
+
+        //public void Modify(Employee employee)
+        //{
+        //    Console.WriteLine(employee);
+        //    Employee tobeModify = db.Employees.Where(emps => employee.DepartmentId == emps.DepartmentId).ToList().FirstOrDefault<Employee>();
+        //    tobeModify.FirstName = employee.FirstName;
+        //    tobeModify.LastName = employee.LastName;
+        //    tobeModify.DesignationId = employee.DesignationId;
+        //    tobeModify.IsResigned = employee.IsResigned;
+        //    tobeModify.UserId = employee.UserId;
+        //    /* tobeModify.HourlyRate = employee.HourlyRate;
+        //     tobeModify.DeptId = employee.DeptId;
+        //     tobeModify.ManagerId = employee.ManagerId;*/
+        //    Console.WriteLine(tobeModify);
+        //    db.SaveChanges();
+
+        //}
 
         public Employee FindById(int EmpId)
         {
