@@ -1,73 +1,73 @@
 import Navbar from "../components/Navbar";
-import { getAllProject } from "../services/project";
+import { getAllProject, deleteProject } from "../services/project"; // Importing deleteProject function
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export function Project() {
-    
-    const [items , setItems]=useState([])
+    const [projects, setProjects] = useState([]);
 
-    const loadAllProjects=async ()=>{
-        const result = await getAllProject()
-        if(result['status']== 'success'){
-
-            console.log(result.data);
-            
-            setItems(result.data)
-        } else{
-            toast.error(result['error'])
+    const loadAllProjects = async () => {
+        try {
+            const result = await getAllProject();
+            setProjects(result.data);
+        } catch (error) {
+            toast.error("Failed to load projects");
         }
-    }
-    useEffect(() => {loadAllProjects()} , [])
+    };
+
+    useEffect(() => {
+        loadAllProjects();
+    }, []);
+
+    const handleDelete = async (projectId) => {
+        try {
+            await deleteProject(projectId);
+            // After successful deletion, update state or reload projects
+            setProjects(projects.filter(project => project.projectId !== projectId));
+            toast.success("Project deleted successfully");
+        } catch (error) {
+            toast.error("Failed to delete project");
+        }
+    };
+    
 
     return (
         <>
             <Navbar />
-           <center>
-           <div className="container">
-                <h1 className="title">All Projects</h1>
-
-                <table style={{width:"100%"}}>
-                <div className="table-responsive">
-                    <table className="table table-bordered myclass"
-                            style={{textAlign: "center"}}>
+            <center>
+                <div className="container">
+                    <h1 className="title">All Projects</h1>
+                    <table className="table table-bordered myclass" style={{ textAlign: "center" }}>
                         <thead>
-                           <tr>
-                            <th>Project Id</th>
-                            <th>Title</th>
-                            <th>Start Date</th>
-                            <th>End Date</th>
-                            <th>Action</th>
-                           </tr>
+                            <tr>
+                                <th>Project Id</th>
+                                <th>Title</th>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                                <th colSpan={2}>Action</th>
+                            </tr>
                         </thead>
                         <tbody>
-                        {
-                            items.map(item=>{
-                                return (
-                                <tr>
-                                <td>{item.projectId}</td>
-                                <td>{item.title}</td>
-                                <td>{item.startDate}</td>
-                                <td>{item.endDate}</td>
-                                <td><Link to='/edit'>Edit</Link></td>
-                                </tr>)
-                            })
-                        }
+                            {projects.map(project => (
+                                <tr key={project.projectId}>
+                                    <td>{project.projectId}</td>
+                                    <td>{project.title}</td>
+                                    <td>{project.startDate}</td>
+                                    <td>{project.endDate}</td>
+                                    <td><Link to={`/edit/${project.projectId}`}>Edit</Link></td>
+                                    <td>
+                                        <button onClick={() => handleDelete(project.projectId)} className="btn btn-primary mt-2">Delete</button>
+                                    </td>
+                                </tr>
+                            ))}
                         </tbody>
-                        </table>
-                        {/* <button className="btn btn-primary mt-2"> 
-                       Add Project */}
-                       <Link to='/addproject'>Add Project here</Link>
-                       {/* </button> */}
-                       
+                    </table>
+                    <Link to='/addproject'>Add Project here</Link>
                 </div>
-                </table>
-
-            </div>
-           </center>
-
+            </center>
         </>
-    )
+    );
 }
+
 export default Project;

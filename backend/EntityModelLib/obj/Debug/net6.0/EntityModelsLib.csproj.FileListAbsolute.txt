@@ -1,0 +1,12 @@
+C:\Users\nived\OneDrive\Desktop\CDAC-Project\CDAC-Project\EntityModelLib\bin\Debug\net6.0\EntityModelsLib.deps.json
+C:\Users\nived\OneDrive\Desktop\CDAC-Project\CDAC-Project\EntityModelLib\bin\Debug\net6.0\EntityModelsLib.dll
+C:\Users\nived\OneDrive\Desktop\CDAC-Project\CDAC-Project\EntityModelLib\bin\Debug\net6.0\EntityModelsLib.pdb
+C:\Users\nived\OneDrive\Desktop\CDAC-Project\CDAC-Project\EntityModelLib\obj\Debug\net6.0\EntityModelsLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nived\OneDrive\Desktop\CDAC-Project\CDAC-Project\EntityModelLib\obj\Debug\net6.0\EntityModelsLib.AssemblyInfoInputs.cache
+C:\Users\nived\OneDrive\Desktop\CDAC-Project\CDAC-Project\EntityModelLib\obj\Debug\net6.0\EntityModelsLib.AssemblyInfo.cs
+C:\Users\nived\OneDrive\Desktop\CDAC-Project\CDAC-Project\EntityModelLib\obj\Debug\net6.0\EntityModelsLib.csproj.CoreCompileInputs.cache
+C:\Users\nived\OneDrive\Desktop\CDAC-Project\CDAC-Project\EntityModelLib\obj\Debug\net6.0\EntityModelsLib.sourcelink.json
+C:\Users\nived\OneDrive\Desktop\CDAC-Project\CDAC-Project\EntityModelLib\obj\Debug\net6.0\EntityModelsLib.dll
+C:\Users\nived\OneDrive\Desktop\CDAC-Project\CDAC-Project\EntityModelLib\obj\Debug\net6.0\refint\EntityModelsLib.dll
+C:\Users\nived\OneDrive\Desktop\CDAC-Project\CDAC-Project\EntityModelLib\obj\Debug\net6.0\EntityModelsLib.pdb
+C:\Users\nived\OneDrive\Desktop\CDAC-Project\CDAC-Project\EntityModelLib\obj\Debug\net6.0\ref\EntityModelsLib.dll
