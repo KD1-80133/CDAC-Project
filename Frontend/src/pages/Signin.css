@@ -1,18 +1,18 @@
 /* Body Styling */
 body {
-    background: linear-gradient(to right,#477fa5,black); /* Add a subtle gradient */
+    background: linear-gradient(to right, #477fa5, whitesmoke);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    color: #333; /* Default text color */
+    color: #333;
 }
 
 /* Navbar Styling */
 
 /* Title Styling */
 .title {
-    font-family: 'Pacifico', cursive; /* Choose a distinctive font */
-    color: black; /* White text color */
+    font-family: 'Pacifico', cursive;
+    color: black;
     text-align: center;
     margin-top: 5rem;
     font-size: 2.5rem;
@@ -20,7 +20,7 @@ body {
 
 /* Button Styling */
 .btn-primary {
-    background: linear-gradient(to right, #3498db, #2980b9); /* Gradient button */
+    background: linear-gradient(to right, #3498db, #2980b9);
     border-color: #2980b9;
     padding: 0.8rem 2rem;
     margin-top: 1rem;
@@ -31,7 +31,7 @@ body {
 }
 
 .btn-primary:hover {
-    background: linear-gradient(to right, #2980b9, #3498db); /* Gradient on hover */
+    background: linear-gradient(to right, #2980b9, #3498db);
 }
 
 /* Link Styling */
@@ -42,7 +42,7 @@ a {
 }
 
 a:hover {
-    color: #f1c40f; /* Yellow on hover */
+    color: #f1c40f;
 }
 
 /* Image and Form Styling */
@@ -53,16 +53,16 @@ a:hover {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 60px;
+    background-color: transparent; /* Set background color to transparent */
 }
 
 .col-md-4 {
     margin-top: 50px;
     max-width: 450px;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    
 }
 
 /* Responsive Adjustments (Optional) */
@@ -76,3 +76,29 @@ a:hover {
         padding: 20px;
     }
 }
+.welcome-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Adjust margin as needed */
+  }
+  
+  .title {
+    color: #3498db;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .welcome-text {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .welcome-text:hover {
+    color: #f39c12; /* Change color on hover */
+  }

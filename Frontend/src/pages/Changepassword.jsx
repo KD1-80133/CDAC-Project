@@ -3,8 +3,6 @@ import { toast } from 'react-toastify';
 import { Link, useNavigate } from 'react-router-dom';
 import { changePassword } from "../services/user";
 
-import './Changepassword.css'; // Import your CSS file
-
 export function Changepassword() {
     const [email, setEmail] = useState('');
     const [oldpassword, setOldpassword] = useState('');
@@ -22,7 +20,7 @@ export function Changepassword() {
         } else {
             // make the api call
             const result = await changePassword(email, oldpassword, newpassword);
-
+            console.log(result);
             if (result.status === 'success') {
                 toast.success('Successfully changed password');
                 navigate('/');
@@ -33,7 +31,7 @@ export function Changepassword() {
     }
 
     return (
-        <div className="changepassword-container">
+        <>
             <h1 className="title">Change Password</h1>
             <div className="row">
                 <div className="col"></div>
@@ -60,8 +58,8 @@ export function Changepassword() {
                 </div>
                 <div className="col"></div>
             </div>
-        </div>
-    )
+        </>
+    );
 }
 
 export default Changepassword;

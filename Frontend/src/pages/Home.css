@@ -1,0 +1,57 @@
+/* Home.css */
+
+/* Body Styling (Keep the same background color as in the signin page) */
+body {
+    background: linear-gradient(to right, #477fa5, whitesmoke);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Home Container Styling */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Set height to 100% of viewport height */
+    overflow: hidden; /* Hide overflow to prevent scrollbar */
+}
+
+/* Image Section Styling */
+.image-section {
+    flex: 1; /* Take up remaining vertical space */
+    overflow: hidden; /* Hide overflow for rounded corners */
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Welcome Section Styling */
+.welcome-section {
+    flex: 1; /* Take up remaining vertical space */
+    text-align: center;
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.welcome-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #fff; /* White text color */
+}
+
+.welcome-section p {
+    font-size: 1.2em;
+    color: #ddd; /* Lighter text color */
+    margin-bottom: 20px;
+}
+
+/* Add any additional styling as needed */

@@ -1,0 +1,86 @@
+/* Project.css */
+
+/* Common styles for both pages */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Navbar Styling */
+/* ... (your existing Navbar styles) */
+
+/* Project page styles */
+.project-body {
+    background: linear-gradient(to right, #477fa5, whitesmoke);
+}
+
+/* Title Styling */
+.title {
+    font-family: 'Pacifico', cursive;
+    color: black;
+    text-align: center;
+    margin-top: 5rem;
+    font-size: 2.5rem;
+}
+
+/* Table Styling */
+.myclass {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.myclass th,
+.myclass td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.myclass th {
+    background: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Add Project button Styling */
+.add-project-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.add-project-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.add-project-button:hover {
+    background-color: #0056b3;
+}
+.edit-button {
+    background-color: #007bff !important;
+    color: #fff !important;
+    padding: 8px 12px !important;
+    cursor: pointer !important;
+    border: none !important;
+    border-radius: 4px !important;
+    text-decoration: none !important;
+    transition: background-color 0.3s ease-in-out !important;
+}
+
+.edit-button:hover {
+    background-color: #0056b3 !important;
+}
